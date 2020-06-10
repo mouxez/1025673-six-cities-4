@@ -1,9 +1,10 @@
 import React from 'react';
 import Main from '../main/Main.jsx';
 
-const App = () => {
+// eslint-disable-next-line react/prop-types
+const App = ({placesCount}) => {
   return (
-    <Main />
+    <Main placesCount={placesCount}/>
   );
 };
 
