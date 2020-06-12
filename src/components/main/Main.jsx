@@ -1,7 +1,7 @@
 import React from 'react';
 import OfferCard from '../offer-card/OfferCard';
+import PropTypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
 const Main = ({offers}) => {
 
   return (
@@ -89,7 +89,6 @@ const Main = ({offers}) => {
               </form>
               <div className="cities__places-list places__list tabs__content">
 
-                {/* eslint-disable-next-line react/prop-types */}
                 {offers.map((offer) => <OfferCard offer={offer} key={offer.id}/>)}
 
               </div>
@@ -102,6 +101,14 @@ const Main = ({offers}) => {
       </main>
     </div>
   );
+};
+
+Main.propTypes = {
+  offers: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+      })
+  ).isRequired,
 };
 
 export default Main;

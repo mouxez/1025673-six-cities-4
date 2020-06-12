@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from "prop-types";
+import {HOUSING_TYPES} from '../../utils';
 
-// eslint-disable-next-line react/prop-types
 const OfferCard = ({offer}) => {
 
-  // eslint-disable-next-line react/prop-types
   const {isPremium, imgSrc, imgDescription, price, isBookmarked, placeDescription, placeType} = offer;
 
   return (
@@ -42,6 +42,18 @@ const OfferCard = ({offer}) => {
       </div>
     </article>
   );
+};
+
+OfferCard.propTypes = {
+  offer: PropTypes.shape({
+    isPremium: PropTypes.bool.isRequired,
+    imgSrc: PropTypes.string.isRequired,
+    imgDescription: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    isBookmarked: PropTypes.bool.isRequired,
+    placeDescription: PropTypes.string.isRequired,
+    placeType: PropTypes.oneOf(HOUSING_TYPES).isRequired,
+  }).isRequired,
 };
 
 export default OfferCard;

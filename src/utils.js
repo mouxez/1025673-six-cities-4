@@ -4,4 +4,11 @@ const getRandomInteger = (min, max) => {
   return Math.round(rand);
 };
 
-export {getRandomInteger};
+const arrayRandElement = (arr) => {
+  let rand = Math.floor(Math.random() * arr.length);
+  return arr[rand];
+};
+
+const HOUSING_TYPES = [`Apartment`, `Room`, `House`, `Hotel`];
+
+export {getRandomInteger, HOUSING_TYPES, arrayRandElement};
