@@ -1,5 +1,5 @@
 import React from 'react';
-import OfferCard from '../offer-card/OfferCard.jsx';
+import OfferCard from '../offer-card/OfferCard';
 
 // eslint-disable-next-line react/prop-types
 const Main = ({offers}) => {
