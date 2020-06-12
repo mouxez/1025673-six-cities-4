@@ -1,19 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/App';
-
-const getRandomInteger = (min, max) => {
-  let rand = min - 0.5 + Math.random() * (max - min + 1);
-
-  return Math.round(rand);
-};
+import {getRandomInteger} from './utils';
 
 const createOffer = () => {
   return (
     {
-      id: Math.random(),
+      id: getRandomInteger(1, 100),
       isPremium: Math.random() > 0.5,
-      imgSrc: `img/room.jpg`,
+      imgSrc: `http://picsum.photos/248/152?r=${Math.random()}`,
       imgDescription: `Some photo description`,
       price: getRandomInteger(40, 90),
       isBookmarked: Math.random() > 0.5,
