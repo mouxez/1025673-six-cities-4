@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import {HOUSING_TYPES} from '../../utils';
+import {HOUSING_TYPES} from '../../data/constants';
 
 const OfferCard = ({offer}) => {
 

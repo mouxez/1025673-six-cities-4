@@ -1,6 +1,7 @@
 import React from 'react';
 import OfferCard from '../offer-card/offer-card';
 import PropTypes from "prop-types";
+import {offerType} from '../../types/offer';
 
 const Main = ({offers}) => {
 
@@ -105,9 +106,7 @@ const Main = ({offers}) => {
 
 Main.propTypes = {
   offers: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-      })
+      offerType.isRequired
   ).isRequired,
 };
 
