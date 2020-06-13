@@ -1,5 +1,5 @@
 import React from 'react';
-import OfferCard from '../offer-card/OfferCard';
+import OfferCard from '../offer-card/offer-card';
 import PropTypes from "prop-types";
 
 const Main = ({offers}) => {
