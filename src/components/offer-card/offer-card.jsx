@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from "prop-types";
-import {HOUSING_TYPES} from '../../data/constants';
+import {offerType} from '../../types/offer';
 
 const OfferCard = ({offer}) => {
 
@@ -45,15 +44,7 @@ const OfferCard = ({offer}) => {
 };
 
 OfferCard.propTypes = {
-  offer: PropTypes.shape({
-    isPremium: PropTypes.bool.isRequired,
-    imgSrc: PropTypes.string.isRequired,
-    imgDescription: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    isBookmarked: PropTypes.bool.isRequired,
-    placeDescription: PropTypes.string.isRequired,
-    placeType: PropTypes.oneOf(HOUSING_TYPES).isRequired,
-  }).isRequired,
+  offer: offerType.isRequired,
 };
 
 export default OfferCard;
