@@ -1,34 +1,54 @@
-import {HOUSING_TYPES} from '../data/constants';
-
-const getRandomInteger = (min, max) => {
-  let rand = min - 0.5 + Math.random() * (max - min + 1);
-
-  return Math.round(rand);
-};
-
-const arrayRandElement = (arr) => {
-  let rand = Math.floor(Math.random() * arr.length);
-  return arr[rand];
-};
-
-const createOffer = () => {
-  return (
-    {
-      id: getRandomInteger(1, 100),
-      isPremium: Math.random() > 0.5,
-      imgSrc: `http://picsum.photos/260/200?r=${Math.random()}`,
-      imgDescription: `Some photo description`,
-      price: getRandomInteger(40, 90),
-      isBookmarked: Math.random() > 0.5,
-      placeDescription: `Some place description`,
-      placeType: arrayRandElement(HOUSING_TYPES),
-    }
-  );
-};
-
-const offers = [];
-for (let i = 0; i < 5; i++) {
-  offers[i] = createOffer();
-}
+const offers = [
+  {
+    id: 1,
+    isPremium: true,
+    imgSrc: `http://picsum.photos/260/200?r=1`,
+    imgDescription: `Some photo description`,
+    price: 100,
+    isBookmarked: false,
+    placeDescription: `Some place description`,
+    placeType: `Apartment`,
+  },
+  {
+    id: 2,
+    isPremium: false,
+    imgSrc: `http://picsum.photos/260/200?r=2`,
+    imgDescription: `Some photo description`,
+    price: 100,
+    isBookmarked: true,
+    placeDescription: `Some place description`,
+    placeType: `Apartment`,
+  },
+  {
+    id: 3,
+    isPremium: false,
+    imgSrc: `http://picsum.photos/260/200?r=3`,
+    imgDescription: `Some photo description`,
+    price: 100,
+    isBookmarked: true,
+    placeDescription: `Some place description`,
+    placeType: `Apartment`,
+  },
+  {
+    id: 4,
+    isPremium: true,
+    imgSrc: `http://picsum.photos/260/200?r=4`,
+    imgDescription: `Some photo description`,
+    price: 100,
+    isBookmarked: false,
+    placeDescription: `Some place description`,
+    placeType: `Apartment`,
+  },
+  {
+    id: 5,
+    isPremium: true,
+    imgSrc: `http://picsum.photos/260/200?r=5`,
+    imgDescription: `Some photo description`,
+    price: 100,
+    isBookmarked: false,
+    placeDescription: `Some place description`,
+    placeType: `Apartment`,
+  },
+];
 
 export {offers};
