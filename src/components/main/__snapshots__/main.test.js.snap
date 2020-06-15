@@ -18,6 +18,7 @@ exports[`Main should render correctly 1`] = `
         >
           <a
             className="header__logo-link header__logo-link--active"
+            onClick={[Function]}
           >
             <img
               alt="6 cities logo"
@@ -355,7 +356,7 @@ exports[`Main should render correctly 1`] = `
                       className="place-card__price-value"
                     >
                       €
-                      100
+                      70
                     </b>
                     <span
                       className="place-card__price-text"
@@ -451,7 +452,7 @@ exports[`Main should render correctly 1`] = `
                       className="place-card__price-value"
                     >
                       €
-                      100
+                      90
                     </b>
                     <span
                       className="place-card__price-text"
@@ -511,7 +512,7 @@ exports[`Main should render correctly 1`] = `
                 <p
                   className="place-card__type"
                 >
-                  Apartment
+                  Room
                 </p>
               </div>
             </article>
@@ -553,7 +554,7 @@ exports[`Main should render correctly 1`] = `
                       className="place-card__price-value"
                     >
                       €
-                      100
+                      120
                     </b>
                     <span
                       className="place-card__price-text"
@@ -611,7 +612,7 @@ exports[`Main should render correctly 1`] = `
                 <p
                   className="place-card__type"
                 >
-                  Apartment
+                  House
                 </p>
               </div>
             </article>
@@ -653,7 +654,7 @@ exports[`Main should render correctly 1`] = `
                       className="place-card__price-value"
                     >
                       €
-                      100
+                      40
                     </b>
                     <span
                       className="place-card__price-text"
@@ -711,7 +712,7 @@ exports[`Main should render correctly 1`] = `
                 <p
                   className="place-card__type"
                 >
-                  Apartment
+                  Hotel
                 </p>
               </div>
             </article>

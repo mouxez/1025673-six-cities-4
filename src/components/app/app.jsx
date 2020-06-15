@@ -3,9 +3,11 @@ import Main from '../main/main';
 import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 
+const logoButtonHandler = () => {};
+
 const App = ({offers}) => {
   return (
-    <Main offers={offers} />
+    <Main offers={offers} onLogoButtonClick={logoButtonHandler} />
   );
 };
 
