@@ -1,5 +1,5 @@
 import React from 'react';
-import OfferCard from '../offer-card/offer-card';
+import OffersList from '../offers-list/offers-list';
 import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 
@@ -88,11 +88,7 @@ const Main = ({offers, onLogoButtonClick}) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-
-                {offers.map((offer) => <OfferCard offer={offer} key={offer.id}/>)}
-
-              </div>
+              <OffersList offers={offers} />
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
