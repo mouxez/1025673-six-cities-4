@@ -9,13 +9,13 @@ Enzyme.configure({
 });
 
 test(`OfferCard should pass offer data to event handler during onMouseEnter event`, () => {
-  const onMouseEnter = jest.fn((result) => result);
+  const onMouseEnter = jest.fn();
 
   const offerCard = shallow(
       <OfferCard
         offer={offers[0]}
-        handleMouseEnter={onMouseEnter}
-        handleMouseLeave={jest.fn()}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={jest.fn()}
       />
   );
 

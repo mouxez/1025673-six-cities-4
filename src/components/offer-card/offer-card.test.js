@@ -7,8 +7,8 @@ test(`OfferCard should render correctly`, () => {
   const tree = renderer.create(
       <OfferCard
         offer={offers[0]}
-        handleMouseEnter={jest.fn()}
-        handleMouseLeave={jest.fn()}
+        onMouseEnter={jest.fn()}
+        onMouseLeave={jest.fn()}
       />
   ).toJSON();
 

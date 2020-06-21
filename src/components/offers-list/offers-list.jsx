@@ -27,8 +27,8 @@ class OffersList extends React.PureComponent {
           return (
             <OfferCard
               offer={offer}
-              handleMouseEnter={this.handleOnCardMouseEnter}
-              handleMouseLeave={this.handleOnCardMouseLeave}
+              onMouseEnter={this.handleOnCardMouseEnter}
+              onMouseLeave={this.handleOnCardMouseLeave}
               key={offer.id}
             />
           );
