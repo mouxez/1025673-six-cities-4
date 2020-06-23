@@ -11,7 +11,7 @@ class App extends React.PureComponent {
   constructor(props) {
     super(props);
   }
-  _renderApp() {
+  _renderMain() {
     const {offers} = this.props;
     return (
       <Main offers={offers} onLogoButtonClick={logoButtonHandler} />
@@ -22,10 +22,10 @@ class App extends React.PureComponent {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            {this._renderApp()}
+            {this._renderMain()}
           </Route>
           <Route exact path="/dev-detailed">
-            <OfferDetailed />
+            <OfferDetailed offer={this.props.offers[0]} />
           </Route>
         </Switch>
       </BrowserRouter>
