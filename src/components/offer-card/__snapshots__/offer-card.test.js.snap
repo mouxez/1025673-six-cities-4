@@ -92,6 +92,7 @@ exports[`OfferCard should render correctly 1`] = `
     >
       <a
         href="/"
+        onClick={[Function]}
       >
         Some place description
       </a>

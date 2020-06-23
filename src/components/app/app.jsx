@@ -4,19 +4,36 @@ import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import OfferDetailed from '../offer-detailed/offer-detailed';
-
-const logoButtonHandler = () => {};
+// import {offers} from '../../mock/offers';
 
 class App extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.state = {
+      activeOffer: -1,
+    };
+    this.handleTitleClick = this.handleTitleClick.bind(this);
+  }
+  handleTitleClick(index) {
+    this.setState({activeOffer: index});
   }
   _renderMain() {
     const {offers} = this.props;
-    return (
-      <Main offers={offers} onLogoButtonClick={logoButtonHandler} />
-    );
+    const {activeOffer} = this.state;
+
+    if (activeOffer === -1) {
+      return (
+        <Main offers={offers} onTitleClick={(index) => this.handleTitleClick(index)} />
+      );
+    }
+    if (offers[activeOffer]) {
+      return (
+        <OfferDetailed offer={offers[activeOffer]} />
+      );
+    }
+    return null;
   }
+
   render() {
     return (
       <BrowserRouter>

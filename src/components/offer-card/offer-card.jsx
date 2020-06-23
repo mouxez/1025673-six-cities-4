@@ -2,9 +2,14 @@ import React from 'react';
 import {offerType} from '../../types/offer';
 import PropTypes from 'prop-types';
 
-const OfferCard = ({offer, onMouseEnter, onMouseLeave}) => {
+const OfferCard = ({offer, onMouseEnter, onMouseLeave, onTitleClick, index}) => {
 
   const {isPremium, imgSrc, imgDescription, price, isBookmarked, placeDescription, placeType} = offer;
+
+  const handleTitleClick = (count, evt) => {
+    evt.preventDefault();
+    onTitleClick(count);
+  };
 
   return (
     <article
@@ -40,7 +45,7 @@ const OfferCard = ({offer, onMouseEnter, onMouseLeave}) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="/">{placeDescription}</a>
+          <a href="/" onClick={(evt) => handleTitleClick(index, evt)}>{placeDescription}</a>
         </h2>
         <p className="place-card__type">{placeType}</p>
       </div>
@@ -52,6 +57,8 @@ OfferCard.propTypes = {
   offer: offerType.isRequired,
   onMouseEnter: PropTypes.func.isRequired,
   onMouseLeave: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+  onTitleClick: PropTypes.func.isRequired,
 };
 
 export default OfferCard;

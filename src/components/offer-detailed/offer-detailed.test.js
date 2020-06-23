@@ -1,16 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import OfferCard from './offer-card';
+import OfferDetailed from './offer-detailed';
 import {offers} from '../../mock/offers';
 
-test(`OfferCard should render correctly`, () => {
+test(`OfferDetailed should render correctly`, () => {
   const tree = renderer.create(
-      <OfferCard
+      <OfferDetailed
         offer={offers[0]}
-        onMouseEnter={jest.fn()}
-        onMouseLeave={jest.fn()}
-        index={1}
-        onTitleClick={jest.fn()}
       />
   ).toJSON();
 

@@ -4,7 +4,7 @@ import Main from './main';
 import {offers} from '../../mock/offers';
 
 test(`Main should render correctly`, () => {
-  const tree = renderer.create(<Main offers={offers} onLogoButtonClick={() => {}} />).toJSON();
+  const tree = renderer.create(<Main offers={offers} onTitleClick={jest.fn()} />).toJSON();
 
   expect(tree).toMatchSnapshot();
 });
