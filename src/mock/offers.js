@@ -6,7 +6,7 @@ const offers = [
     imgDescription: `Some photo description`,
     price: 100,
     isBookmarked: false,
-    placeDescription: `Some place description`,
+    title: `Some place description`,
     placeType: `Apartment`,
     rating: `4.0`,
     photoCollection: [
@@ -38,7 +38,7 @@ const offers = [
     imgDescription: `Some photo description`,
     price: 70,
     isBookmarked: true,
-    placeDescription: `Some place description`,
+    title: `Some place description`,
     placeType: `Apartment`,
     rating: `4.0`,
     photoCollection: [
@@ -72,7 +72,7 @@ const offers = [
     imgDescription: `Some photo description`,
     price: 90,
     isBookmarked: true,
-    placeDescription: `Some place description`,
+    title: `Some place description`,
     placeType: `Room`,
     rating: `4.0`,
     photoCollection: [
@@ -104,7 +104,7 @@ const offers = [
     imgDescription: `Some photo description`,
     price: 120,
     isBookmarked: false,
-    placeDescription: `Some place description`,
+    title: `Some place description`,
     placeType: `House`,
     rating: `4.0`,
     photoCollection: [
@@ -138,7 +138,7 @@ const offers = [
     imgDescription: `Some photo description`,
     price: 40,
     isBookmarked: false,
-    placeDescription: `Some place description`,
+    title: `Some place description`,
     placeType: `Hotel`,
     rating: `4.0`,
     photoCollection: [

@@ -8,7 +8,7 @@ const offerType = PropTypes.shape({
   imgDescription: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   isBookmarked: PropTypes.bool.isRequired,
-  placeDescription: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   placeType: PropTypes.oneOf(HOUSING_TYPES).isRequired,
   rating: PropTypes.string.isRequired,
   photoCollection: PropTypes.array.isRequired,

@@ -2,7 +2,7 @@ import React from 'react';
 import {offerType} from '../../types/offer';
 
 const OfferDetailed = ({offer}) => {
-  const {photoCollection, isPremium, placeDescription, placeType, rating, bedroomsCount, placeCapacity, price, facilities, host, locationDescription} = offer;
+  const {photoCollection, isPremium, title, isBookmarked, placeType, rating, bedroomsCount, placeCapacity, price, facilities, host, locationDescription} = offer;
   const {hostName, avatarSrc} = host;
   return (
     <div className="page">
@@ -49,11 +49,11 @@ const OfferDetailed = ({offer}) => {
               </div> : ``}
               <div className="property__name-wrapper">
                 <h1 className="property__name">
-                  {placeDescription}
+                  {title}
                 </h1>
                 <button className="property__bookmark-button button" type="button">
                   <svg className="property__bookmark-icon" width="31" height="33">
-                    <use xlinkHref="#icon-bookmark"></use>
+                    {isBookmarked ? <use xlinkHref="#icon-bookmark"></use> : ``}
                   </svg>
                   <span className="visually-hidden">To bookmarks</span>
                 </button>
@@ -83,10 +83,10 @@ const OfferDetailed = ({offer}) => {
               <div className="property__inside">
                 <h2 className="property__inside-title">What&apos;s inside</h2>
                 <ul className="property__inside-list">
-                  {facilities.map((feature, index) => {
+                  {facilities.map((facility) => {
                     return (
-                      <li className="property__inside-item" key={`${feature}--${index}`}>
-                        {feature}
+                      <li className="property__inside-item" key={facility}>
+                        {facility}
                       </li>
                     );
                   })}
@@ -103,10 +103,10 @@ const OfferDetailed = ({offer}) => {
                   </span>
                 </div>
                 <div className="property__description">
-                  {locationDescription.map((text, index) => {
+                  {locationDescription.map((description) => {
                     return (
-                      <p className="property__text" key={index + Math.round(Math.random() * 100)}>
-                        {text}
+                      <p className="property__text" key={description}>
+                        {description}
                       </p>
                     );
                   })}

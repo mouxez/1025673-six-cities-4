@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const OfferCard = ({offer, onMouseEnter, onMouseLeave, onTitleClick, index}) => {
 
-  const {isPremium, imgSrc, imgDescription, price, isBookmarked, placeDescription, placeType} = offer;
+  const {isPremium, imgSrc, imgDescription, price, isBookmarked, title, placeType} = offer;
 
   const handleTitleClick = (count, evt) => {
     evt.preventDefault();
@@ -45,7 +45,7 @@ const OfferCard = ({offer, onMouseEnter, onMouseLeave, onTitleClick, index}) => 
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="/" onClick={(evt) => handleTitleClick(index, evt)}>{placeDescription}</a>
+          <a href="/" onClick={(evt) => handleTitleClick(index, evt)}>{title}</a>
         </h2>
         <p className="place-card__type">{placeType}</p>
       </div>
