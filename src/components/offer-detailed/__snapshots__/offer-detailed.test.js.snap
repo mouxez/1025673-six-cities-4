@@ -96,33 +96,6 @@ exports[`OfferDetailed should render correctly 1`] = `
               src="http://picsum.photos/260/200?r=1"
             />
           </div>
-          <div
-            className="property__image-wrapper"
-          >
-            <img
-              alt="Photo studio"
-              className="property__image"
-              src="http://picsum.photos/260/200?r=1"
-            />
-          </div>
-          <div
-            className="property__image-wrapper"
-          >
-            <img
-              alt="Photo studio"
-              className="property__image"
-              src="http://picsum.photos/260/200?r=1"
-            />
-          </div>
-          <div
-            className="property__image-wrapper"
-          >
-            <img
-              alt="Photo studio"
-              className="property__image"
-              src="http://picsum.photos/260/200?r=1"
-            />
-          </div>
         </div>
       </div>
       <div
@@ -144,7 +117,7 @@ exports[`OfferDetailed should render correctly 1`] = `
             <h1
               className="property__name"
             >
-              Some place description
+              Beautiful & luxurious studio at great location
             </h1>
             <button
               className="property__bookmark-button button"
@@ -155,9 +128,7 @@ exports[`OfferDetailed should render correctly 1`] = `
                 height="33"
                 width="31"
               >
-                <use
-                  xlinkHref="#icon-bookmark"
-                />
+                
               </svg>
               <span
                 className="visually-hidden"
@@ -188,7 +159,7 @@ exports[`OfferDetailed should render correctly 1`] = `
             <span
               className="property__rating-value rating__value"
             >
-              4.0
+              4.8
             </span>
           </div>
           <ul
@@ -197,7 +168,7 @@ exports[`OfferDetailed should render correctly 1`] = `
             <li
               className="property__feature property__feature--entire"
             >
-              Apartment
+              apartment
             </li>
             <li
               className="property__feature property__feature--bedrooms"
@@ -217,7 +188,7 @@ exports[`OfferDetailed should render correctly 1`] = `
               className="property__price-value"
             >
               €
-              100
+              110
             </b>
             <span
               className="property__price-text"
@@ -239,12 +210,27 @@ exports[`OfferDetailed should render correctly 1`] = `
               <li
                 className="property__inside-item"
               >
-                Wi-Fi
+                Heating
               </li>
               <li
                 className="property__inside-item"
               >
-                Cabel TV
+                Kitchen
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Cable TV
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Washing machine
+              </li>
+              <li
+                className="property__inside-item"
+              >
+                Coffee machine
               </li>
               <li
                 className="property__inside-item"
@@ -278,7 +264,7 @@ exports[`OfferDetailed should render correctly 1`] = `
               <span
                 className="property__user-name"
               >
-                Alex
+                Angelina
               </span>
             </div>
             <div
@@ -287,12 +273,7 @@ exports[`OfferDetailed should render correctly 1`] = `
               <p
                 className="property__text"
               >
-                Some location description #1
-              </p>
-              <p
-                className="property__text"
-              >
-                Some location description #2
+                A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.
               </p>
             </div>
           </div>

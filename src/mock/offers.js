@@ -1,169 +1,139 @@
 const offers = [
   {
-    id: 1,
-    isPremium: true,
-    imgSrc: `http://picsum.photos/260/200?r=1`,
-    imgDescription: `Some photo description`,
-    price: 100,
-    isBookmarked: false,
-    title: `Some place description`,
-    placeType: `Apartment`,
-    rating: `4.0`,
-    photoCollection: [
-      `http://picsum.photos/260/200?r=1`,
-      `http://picsum.photos/260/200?r=1`,
-      `http://picsum.photos/260/200?r=1`,
-      `http://picsum.photos/260/200?r=1`,
-      `http://picsum.photos/260/200?r=1`,
-      `http://picsum.photos/260/200?r=1`
-    ],
-    bedroomsCount: 3,
-    placeCapacity: 4,
-    facilities: [
-      `Wi-Fi`,
-      `Cabel TV`,
-      `Dishwasher`
-    ],
-    host: {
-      hostName: `Alex`,
-      avatarSrc: `http://picsum.photos/90/90?r=1`,
-      isSuper: true,
+    "bedrooms": 3,
+    "city": {
+      "location": {
+        "latitude": 52.370216,
+        "longitude": 4.895168,
+        "zoom": 10
+      },
+      "name": `Amsterdam`
     },
-    locationDescription: [`Some location description #1`, `Some location description #2`],
+    "description": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "goods": [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
+    "host": {
+      "avatarUrl": `http://picsum.photos/90/90?r=1`,
+      "id": 11,
+      "isPro": true,
+      "name": `Angelina`
+    },
+    "id": 1,
+    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`],
+    "isFavorite": false,
+    "isPremium": true,
+    "location": {
+      "latitude": 52.35514938496378,
+      "longitude": 4.673877537499948,
+      "zoom": 8
+    },
+    "maxAdults": 4,
+    "previewImage": `http://picsum.photos/260/200?r=1`,
+    "price": 110,
+    "rating": 4.8,
+    "title": `Beautiful & luxurious studio at great location`,
+    "type": `apartment`
   },
   {
-    id: 2,
-    isPremium: false,
-    imgSrc: `http://picsum.photos/260/200?r=2`,
-    imgDescription: `Some photo description`,
-    price: 70,
-    isBookmarked: true,
-    title: `Some place description`,
-    placeType: `Apartment`,
-    rating: `4.0`,
-    photoCollection: [
-      `http://picsum.photos/260/200?r=2`,
-      `http://picsum.photos/260/200?r=2`,
-      `http://picsum.photos/260/200?r=2`,
-      `http://picsum.photos/260/200?r=2`,
-      `http://picsum.photos/260/200?r=2`,
-      `http://picsum.photos/260/200?r=2`
-    ],
-    bedroomsCount: 3,
-    placeCapacity: 4,
-    facilities: [
-      `Wi-Fi`,
-      `Kitchen`,
-      `Cabel TV`,
-      `Dishwasher`,
-      `Parking`
-    ],
-    host: {
-      hostName: `Lena`,
-      avatarSrc: `http://picsum.photos/90/90?r=1`,
-      isSuper: true,
+    "bedrooms": 1,
+    "city": {
+      "location": {
+        "latitude": 52.370216,
+        "longitude": 4.895168,
+        "zoom": 10
+      },
+      "name": `Paris`
     },
-    locationDescription: [`Some location description #1`, `Some location description #2`],
+    "description": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "goods": [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
+    "host": {
+      "avatarUrl": `http://picsum.photos/90/90?r=1`,
+      "id": 22,
+      "isPro": false,
+      "name": `Ivan`
+    },
+    "id": 2,
+    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`],
+    "isFavorite": true,
+    "isPremium": false,
+    "location": {
+      "latitude": 52.35514938496378,
+      "longitude": 4.673877537499948,
+      "zoom": 8
+    },
+    "maxAdults": 1,
+    "previewImage": `http://picsum.photos/260/200?r=2`,
+    "price": 80,
+    "rating": 2.8,
+    "title": `Beautiful & luxurious studio at great location`,
+    "type": `room`
   },
   {
-    id: 3,
-    isPremium: false,
-    imgSrc: `http://picsum.photos/260/200?r=3`,
-    imgDescription: `Some photo description`,
-    price: 90,
-    isBookmarked: true,
-    title: `Some place description`,
-    placeType: `Room`,
-    rating: `4.0`,
-    photoCollection: [
-      `http://picsum.photos/260/200?r=3`,
-      `http://picsum.photos/260/200?r=3`,
-      `http://picsum.photos/260/200?r=3`,
-      `http://picsum.photos/260/200?r=3`,
-      `http://picsum.photos/260/200?r=3`,
-      `http://picsum.photos/260/200?r=3`
-    ],
-    bedroomsCount: 3,
-    placeCapacity: 4,
-    facilities: [
-      `Kitchen`,
-      `Cabel TV`,
-      `Dishwasher`
-    ],
-    host: {
-      hostName: `John`,
-      avatarSrc: `http://picsum.photos/90/90?r=1`,
-      isSuper: false,
+    "bedrooms": 2,
+    "city": {
+      "location": {
+        "latitude": 52.370216,
+        "longitude": 4.895168,
+        "zoom": 10
+      },
+      "name": `Hamburg`
     },
-    locationDescription: [`Some location description #1`, `Some location description #2`],
+    "description": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "goods": [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
+    "host": {
+      "avatarUrl": `http://picsum.photos/90/90?r=1`,
+      "id": 33,
+      "isPro": false,
+      "name": `Alex`
+    },
+    "id": 3,
+    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`],
+    "isFavorite": true,
+    "isPremium": true,
+    "location": {
+      "latitude": 52.35514938496378,
+      "longitude": 4.673877537499948,
+      "zoom": 8
+    },
+    "maxAdults": 2,
+    "previewImage": `http://picsum.photos/260/200?r=3`,
+    "price": 20,
+    "rating": 3.8,
+    "title": `Beautiful & luxurious studio at great location`,
+    "type": `house`
   },
   {
-    id: 4,
-    isPremium: true,
-    imgSrc: `http://picsum.photos/260/200?r=4`,
-    imgDescription: `Some photo description`,
-    price: 120,
-    isBookmarked: false,
-    title: `Some place description`,
-    placeType: `House`,
-    rating: `4.0`,
-    photoCollection: [
-      `http://picsum.photos/260/200?r=4`,
-      `http://picsum.photos/260/200?r=4`,
-      `http://picsum.photos/260/200?r=4`,
-      `http://picsum.photos/260/200?r=4`,
-      `http://picsum.photos/260/200?r=4`,
-      `http://picsum.photos/260/200?r=4`
-    ],
-    bedroomsCount: 3,
-    placeCapacity: 4,
-    facilities: [
-      `Wi-Fi`,
-      `Kitchen`,
-      `Cabel TV`,
-      `Dishwasher`,
-      `Pool`
-    ],
-    host: {
-      hostName: `Ivan`,
-      avatarSrc: `http://picsum.photos/90/90?r=1`,
-      isSuper: true,
+    "bedrooms": 4,
+    "city": {
+      "location": {
+        "latitude": 52.370216,
+        "longitude": 4.895168,
+        "zoom": 10
+      },
+      "name": `Cologne`
     },
-    locationDescription: [`Some location description #1`, `Some location description #2`],
-  },
-  {
-    id: 5,
-    isPremium: true,
-    imgSrc: `http://picsum.photos/260/200?r=5`,
-    imgDescription: `Some photo description`,
-    price: 40,
-    isBookmarked: false,
-    title: `Some place description`,
-    placeType: `Hotel`,
-    rating: `4.0`,
-    photoCollection: [
-      `http://picsum.photos/260/200?r=5`,
-      `http://picsum.photos/260/200?r=5`,
-      `http://picsum.photos/260/200?r=5`,
-      `http://picsum.photos/260/200?r=5`,
-      `http://picsum.photos/260/200?r=5`,
-      `http://picsum.photos/260/200?r=5`
-    ],
-    bedroomsCount: 3,
-    placeCapacity: 4,
-    facilities: [
-      `Wi-Fi`,
-      `Kitchen`,
-      `Cabel TV`,
-      `Dishwasher`,
-      `Sea view`
-    ],
-    host: {
-      hostName: `Elly`,
-      avatarSrc: `http://picsum.photos/90/90?r=1`,
-      isSuper: true,
+    "description": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "goods": [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
+    "host": {
+      "avatar_url": `http://picsum.photos/90/90?r=1`,
+      "id": 44,
+      "isPro": false,
+      "name": `Sergey`
     },
-    locationDescription: [`Some location description #1`, `Some location description #2`],
+    "id": 4,
+    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`],
+    "isFavorite": false,
+    "isPremium": true,
+    "location": {
+      "latitude": 52.35514938496378,
+      "longitude": 4.673877537499948,
+      "zoom": 8
+    },
+    "maxAdults": 3,
+    "previewImage": `http://picsum.photos/260/200?r=4`,
+    "price": 100,
+    "rating": 5.0,
+    "title": `Beautiful & luxurious studio at great location`,
+    "type": `hotel`
   },
 ];
 

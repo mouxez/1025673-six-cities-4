@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import OfferDetailed from '../offer-detailed/offer-detailed';
-// import {offers} from '../../mock/offers';
 
 class App extends React.PureComponent {
   constructor(props) {

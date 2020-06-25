@@ -2,8 +2,9 @@ import React from 'react';
 import {offerType} from '../../types/offer';
 
 const OfferDetailed = ({offer}) => {
-  const {photoCollection, isPremium, title, isBookmarked, placeType, rating, bedroomsCount, placeCapacity, price, facilities, host, locationDescription} = offer;
-  const {hostName, avatarSrc} = host;
+  const {images, isPremium, title, isFavorite, type, rating, bedrooms, maxAdults, price, goods, host, description} = offer;
+  const {name, avatarUrl} = host;
+
   return (
     <div className="page">
       <header className="header">
@@ -33,9 +34,9 @@ const OfferDetailed = ({offer}) => {
         <section className="property">
           <div className="property__gallery-container container">
             <div className="property__gallery">
-              {photoCollection.map((photoSrc, index) => {
+              {images.map((photoSrc) => {
                 return (
-                  <div className="property__image-wrapper" key={`${photoSrc}--${index}`}>
+                  <div className="property__image-wrapper" key={photoSrc}>
                     <img className="property__image" src={photoSrc} alt="Photo studio" />
                   </div>
                 );
@@ -53,27 +54,27 @@ const OfferDetailed = ({offer}) => {
                 </h1>
                 <button className="property__bookmark-button button" type="button">
                   <svg className="property__bookmark-icon" width="31" height="33">
-                    {isBookmarked ? <use xlinkHref="#icon-bookmark"></use> : ``}
+                    {isFavorite ? <use xlinkHref="#icon-bookmark"></use> : ``}
                   </svg>
                   <span className="visually-hidden">To bookmarks</span>
                 </button>
               </div>
               <div className="property__rating rating">
                 <div className="property__stars rating__stars">
-                  <span style={{width: `80%`}}></span>
+                  <span style={{width: (Math.floor(rating) * 20 + `%`)}}></span>
                   <span className="visually-hidden">Rating</span>
                 </div>
                 <span className="property__rating-value rating__value">{rating}</span>
               </div>
               <ul className="property__features">
                 <li className="property__feature property__feature--entire">
-                  {placeType}
+                  {type}
                 </li>
                 <li className="property__feature property__feature--bedrooms">
-                  {`${bedroomsCount} Bedrooms`}
+                  {`${bedrooms} Bedrooms`}
                 </li>
                 <li className="property__feature property__feature--adults">
-                  {`Max ${placeCapacity} adults`}
+                  {`Max ${maxAdults} adults`}
                 </li>
               </ul>
               <div className="property__price">
@@ -83,10 +84,10 @@ const OfferDetailed = ({offer}) => {
               <div className="property__inside">
                 <h2 className="property__inside-title">What&apos;s inside</h2>
                 <ul className="property__inside-list">
-                  {facilities.map((facility) => {
+                  {goods.map((good) => {
                     return (
-                      <li className="property__inside-item" key={facility}>
-                        {facility}
+                      <li className="property__inside-item" key={good}>
+                        {good}
                       </li>
                     );
                   })}
@@ -96,20 +97,16 @@ const OfferDetailed = ({offer}) => {
                 <h2 className="property__host-title">Meet the host</h2>
                 <div className="property__host-user user">
                   <div className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper">
-                    <img className="property__avatar user__avatar" src={avatarSrc} width="74" height="74" alt="Host avatar" />
+                    <img className="property__avatar user__avatar" src={avatarUrl} width="74" height="74" alt="Host avatar" />
                   </div>
                   <span className="property__user-name">
-                    {hostName}
+                    {name}
                   </span>
                 </div>
                 <div className="property__description">
-                  {locationDescription.map((description) => {
-                    return (
-                      <p className="property__text" key={description}>
-                        {description}
-                      </p>
-                    );
-                  })}
+                  <p className="property__text">
+                    {description}
+                  </p>
                 </div>
               </div>
               <section className="property__reviews reviews">

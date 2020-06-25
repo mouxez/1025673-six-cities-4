@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const OfferCard = ({offer, onMouseEnter, onMouseLeave, onTitleClick, index}) => {
 
-  const {isPremium, imgSrc, imgDescription, price, isBookmarked, title, placeType} = offer;
+  const {isPremium, previewImage, price, isFavorite, title, type} = offer;
 
   const handleTitleClick = (count, evt) => {
     evt.preventDefault();
@@ -22,7 +22,7 @@ const OfferCard = ({offer, onMouseEnter, onMouseLeave, onTitleClick, index}) => 
       </div> : ``}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="/">
-          <img className="place-card__image" src={imgSrc} width="260" height="200" alt={imgDescription} />
+          <img className="place-card__image" src={previewImage} width="260" height="200" alt="property image" />
         </a>
       </div>
       <div className="place-card__info">
@@ -33,7 +33,7 @@ const OfferCard = ({offer, onMouseEnter, onMouseLeave, onTitleClick, index}) => 
           </div>
           <button className="place-card__bookmark-button button" type="button">
             <svg className="place-card__bookmark-icon" width="18" height="19">
-              {isBookmarked ? <use xlinkHref="#icon-bookmark"></use> : ``}
+              {isFavorite ? <use xlinkHref="#icon-bookmark"></use> : ``}
             </svg>
             <span className="visually-hidden">To bookmarks</span>
           </button>
@@ -47,7 +47,7 @@ const OfferCard = ({offer, onMouseEnter, onMouseLeave, onTitleClick, index}) => 
         <h2 className="place-card__name">
           <a href="/" onClick={(evt) => handleTitleClick(index, evt)}>{title}</a>
         </h2>
-        <p className="place-card__type">{placeType}</p>
+        <p className="place-card__type">{type}</p>
       </div>
     </article>
   );

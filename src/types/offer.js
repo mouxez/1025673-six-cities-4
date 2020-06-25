@@ -2,25 +2,24 @@ import PropTypes from "prop-types";
 import {HOUSING_TYPES} from '../data/constants';
 
 const offerType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  isPremium: PropTypes.bool.isRequired,
-  imgSrc: PropTypes.string.isRequired,
-  imgDescription: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  isBookmarked: PropTypes.bool.isRequired,
-  title: PropTypes.string.isRequired,
-  placeType: PropTypes.oneOf(HOUSING_TYPES).isRequired,
-  rating: PropTypes.string.isRequired,
-  photoCollection: PropTypes.array.isRequired,
-  bedroomsCount: PropTypes.number.isRequired,
-  placeCapacity: PropTypes.number.isRequired,
-  facilities: PropTypes.array.isRequired,
+  bedrooms: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
+  goods: PropTypes.array.isRequired,
   host: PropTypes.shape({
-    hostName: PropTypes.string.isRequired,
-    avatarSrc: PropTypes.string.isRequired,
-    isSuper: PropTypes.bool.isRequired,
+    name: PropTypes.string.isRequired,
+    avatarUrl: PropTypes.string,
+    isPro: PropTypes.bool.isRequired,
   }),
-  locationDescription: PropTypes.array.isRequired,
+  id: PropTypes.number.isRequired,
+  images: PropTypes.array.isRequired,
+  isPremium: PropTypes.bool.isRequired,
+  isFavorite: PropTypes.bool.isRequired,
+  maxAdults: PropTypes.number.isRequired,
+  previewImage: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+  price: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(HOUSING_TYPES).isRequired,
 });
 
 export {offerType};
