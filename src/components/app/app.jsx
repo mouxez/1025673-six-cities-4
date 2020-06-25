@@ -22,7 +22,7 @@ class App extends React.PureComponent {
 
     if (activeOffer === -1) {
       return (
-        <Main offers={offers} onOfferTitleClick={(index) => this.handleOfferTitleClick(index)} />
+        <Main offers={offers} onOfferTitleClick={this.handleOfferTitleClick} />
       );
     }
     if (offers[activeOffer]) {
