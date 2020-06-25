@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const OfferCard = ({offer, onMouseEnter, onMouseLeave, onTitleClick, index}) => {
 
-  const {isPremium, previewImage, price, isFavorite, title, type} = offer;
+  const {isPremium, previewImage, price, isFavorite, title, rating, type} = offer;
 
   const handleTitleClick = (count, evt) => {
     evt.preventDefault();
@@ -40,7 +40,7 @@ const OfferCard = ({offer, onMouseEnter, onMouseLeave, onTitleClick, index}) => 
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{width: `80%`}}></span>
+            <span style={{width: (Math.floor(rating) * 20 + `%`)}}></span>
             <span className="visually-hidden">Rating</span>
           </div>
         </div>

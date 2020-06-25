@@ -7,7 +7,7 @@ const offerType = PropTypes.shape({
   goods: PropTypes.array.isRequired,
   host: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    avatarUrl: PropTypes.string,
+    avatarUrl: PropTypes.string.isRequired,
     isPro: PropTypes.bool.isRequired,
   }),
   id: PropTypes.number.isRequired,

@@ -114,7 +114,7 @@ const offers = [
     "description": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
     "goods": [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
     "host": {
-      "avatar_url": `http://picsum.photos/90/90?r=1`,
+      "avatarUrl": `http://picsum.photos/90/90?r=1`,
       "id": 44,
       "isPro": false,
       "name": `Sergey`
