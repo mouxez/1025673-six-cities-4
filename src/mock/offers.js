@@ -18,7 +18,7 @@ const offers = [
       "name": `Angelina`
     },
     "id": 1,
-    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`],
+    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=2`, `http://picsum.photos/260/200?r=3`],
     "isFavorite": false,
     "isPremium": true,
     "location": {
@@ -46,13 +46,13 @@ const offers = [
     "description": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
     "goods": [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
     "host": {
-      "avatarUrl": `http://picsum.photos/90/90?r=1`,
+      "avatarUrl": `http://picsum.photos/90/90?r=2`,
       "id": 22,
       "isPro": false,
       "name": `Ivan`
     },
     "id": 2,
-    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`],
+    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=2`, `http://picsum.photos/260/200?r=3`],
     "isFavorite": true,
     "isPremium": false,
     "location": {
@@ -80,13 +80,13 @@ const offers = [
     "description": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
     "goods": [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
     "host": {
-      "avatarUrl": `http://picsum.photos/90/90?r=1`,
+      "avatarUrl": `http://picsum.photos/90/90?r=3`,
       "id": 33,
       "isPro": false,
       "name": `Alex`
     },
     "id": 3,
-    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`],
+    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=2`, `http://picsum.photos/260/200?r=3`],
     "isFavorite": true,
     "isPremium": true,
     "location": {
@@ -114,13 +114,13 @@ const offers = [
     "description": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
     "goods": [`Heating`, `Kitchen`, `Cable TV`, `Washing machine`, `Coffee machine`, `Dishwasher`],
     "host": {
-      "avatarUrl": `http://picsum.photos/90/90?r=1`,
+      "avatarUrl": `http://picsum.photos/90/90?r=4`,
       "id": 44,
       "isPro": false,
       "name": `Sergey`
     },
     "id": 4,
-    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=1`],
+    "images": [`http://picsum.photos/260/200?r=1`, `http://picsum.photos/260/200?r=2`, `http://picsum.photos/260/200?r=3`],
     "isFavorite": false,
     "isPremium": true,
     "location": {

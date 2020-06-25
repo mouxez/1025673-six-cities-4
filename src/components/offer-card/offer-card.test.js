@@ -10,7 +10,7 @@ test(`OfferCard should render correctly`, () => {
         onMouseEnter={jest.fn()}
         onMouseLeave={jest.fn()}
         index={1}
-        onTitleClick={jest.fn()}
+        onOfferTitleClick={jest.fn()}
       />
   ).toJSON();
 

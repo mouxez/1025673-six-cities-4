@@ -84,7 +84,7 @@ exports[`OfferDetailed should render correctly 1`] = `
             <img
               alt="Photo studio"
               className="property__image"
-              src="http://picsum.photos/260/200?r=1"
+              src="http://picsum.photos/260/200?r=2"
             />
           </div>
           <div
@@ -93,7 +93,7 @@ exports[`OfferDetailed should render correctly 1`] = `
             <img
               alt="Photo studio"
               className="property__image"
-              src="http://picsum.photos/260/200?r=1"
+              src="http://picsum.photos/260/200?r=3"
             />
           </div>
         </div>

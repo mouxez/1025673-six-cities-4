@@ -20,7 +20,7 @@ class OffersList extends React.PureComponent {
     this.setState({activeCard: {}});
   }
   render() {
-    const {offers, onTitleClick} = this.props;
+    const {offers, onOfferTitleClick} = this.props;
     return (
       <div className="cities__places-list places__list tabs__content">
         {offers.map((offer, index) => {
@@ -30,7 +30,7 @@ class OffersList extends React.PureComponent {
               onMouseEnter={this.handleOnCardMouseEnter}
               onMouseLeave={this.handleOnCardMouseLeave}
               key={offer.id}
-              onTitleClick={onTitleClick}
+              onOfferTitleClick={onOfferTitleClick}
               index={index}
             />
           );
@@ -44,7 +44,7 @@ OffersList.propTypes = {
   offers: PropTypes.arrayOf(
       offerType.isRequired
   ).isRequired,
-  onTitleClick: PropTypes.func.isRequired,
+  onOfferTitleClick: PropTypes.func.isRequired,
 };
 
 export default OffersList;

@@ -21,7 +21,7 @@ describe(`OfferCard e2e test`, () => {
           onMouseEnter={onMouseEnter}
           onMouseLeave={jest.fn()}
           index={1}
-          onTitleClick={jest.fn()}
+          onOfferTitleClick={jest.fn()}
         />
     );
 
@@ -31,7 +31,7 @@ describe(`OfferCard e2e test`, () => {
     expect(onMouseEnter.mock.calls[0][0]).toMatchObject(offers[0]);
   });
   test(`should render OfferDetailed component on title click`, () => {
-    const titleClick = jest.fn();
+    const OfferTitleClick = jest.fn();
 
     const offerIndex = 1;
 
@@ -41,13 +41,13 @@ describe(`OfferCard e2e test`, () => {
           onMouseEnter={jest.fn()}
           onMouseLeave={jest.fn()}
           index={offerIndex}
-          onTitleClick={titleClick}
+          onOfferTitleClick={OfferTitleClick}
         />
     );
 
     const offerTitle = offerCard.find(`.place-card__name a`);
     offerTitle.simulate(`click`, mockEvent);
 
-    expect(titleClick.mock.calls.length).toBe(offerIndex);
+    expect(OfferTitleClick.mock.calls.length).toBe(offerIndex);
   });
 });

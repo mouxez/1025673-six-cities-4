@@ -11,9 +11,9 @@ class App extends React.PureComponent {
     this.state = {
       activeOffer: -1,
     };
-    this.handleTitleClick = this.handleTitleClick.bind(this);
+    this.handleOfferTitleClick = this.handleOfferTitleClick.bind(this);
   }
-  handleTitleClick(index) {
+  handleOfferTitleClick(index) {
     this.setState({activeOffer: index});
   }
   _renderMain() {
@@ -22,7 +22,7 @@ class App extends React.PureComponent {
 
     if (activeOffer === -1) {
       return (
-        <Main offers={offers} onTitleClick={(index) => this.handleTitleClick(index)} />
+        <Main offers={offers} onOfferTitleClick={(index) => this.handleOfferTitleClick(index)} />
       );
     }
     if (offers[activeOffer]) {

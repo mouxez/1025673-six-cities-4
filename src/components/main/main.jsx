@@ -3,7 +3,7 @@ import OffersList from '../offers-list/offers-list';
 import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 
-const Main = ({offers, onTitleClick}) => {
+const Main = ({offers, onOfferTitleClick}) => {
 
   return (
     <div className="page page--gray page--main">
@@ -88,7 +88,7 @@ const Main = ({offers, onTitleClick}) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <OffersList offers={offers} onTitleClick={onTitleClick}/>
+              <OffersList offers={offers} onOfferTitleClick={onOfferTitleClick}/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
@@ -104,7 +104,7 @@ Main.propTypes = {
   offers: PropTypes.arrayOf(
       offerType.isRequired
   ).isRequired,
-  onTitleClick: PropTypes.func.isRequired,
+  onOfferTitleClick: PropTypes.func.isRequired,
 };
 
 export default Main;
