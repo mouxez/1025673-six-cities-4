@@ -9,31 +9,27 @@ class App extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      activeOffer: -1,
+      activeOffer: null,
     };
     this.handleOfferTitleClick = this.handleOfferTitleClick.bind(this);
   }
-  handleOfferTitleClick(index) {
-    this.setState({activeOffer: index});
+  handleOfferTitleClick(offer) {
+    this.setState({activeOffer: offer});
   }
   _renderMain() {
-    const {offers} = this.props;
-    const {activeOffer} = this.state;
-
-    if (activeOffer === -1) {
+    if (this.state.activeOffer) {
       return (
-        <Main offers={offers} onOfferTitleClick={this.handleOfferTitleClick} />
+        <OfferDetailed offer={this.state.activeOffer} />
+      );
+    } else {
+      return (
+        <Main offers={this.props.offers} onOfferTitleClick={this.handleOfferTitleClick} />
       );
     }
-    if (offers[activeOffer]) {
-      return (
-        <OfferDetailed offer={offers[activeOffer]} />
-      );
-    }
-    return null;
   }
 
   render() {
+    const {offers} = this.props;
     return (
       <BrowserRouter>
         <Switch>
@@ -41,7 +37,7 @@ class App extends React.PureComponent {
             {this._renderMain()}
           </Route>
           <Route exact path="/dev-detailed">
-            <OfferDetailed offer={this.props.offers[0]} />
+            <OfferDetailed offer={offers[0]} />
           </Route>
         </Switch>
       </BrowserRouter>

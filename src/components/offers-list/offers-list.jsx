@@ -8,13 +8,13 @@ class OffersList extends React.PureComponent {
     super(props);
 
     this.state = {
-      activeCard: {},
+      activeCard: null,
     };
     this.handleOnCardMouseEnter = this._handleOnCardMouseEnter.bind(this);
     this.handleOnCardMouseLeave = this._handleOnCardMouseLeave.bind(this);
   }
-  _handleOnCardMouseEnter(card) {
-    this.setState({activeCard: card});
+  _handleOnCardMouseEnter(offer) {
+    this.setState({activeCard: offer});
   }
   _handleOnCardMouseLeave() {
     this.setState({activeCard: {}});
@@ -23,7 +23,7 @@ class OffersList extends React.PureComponent {
     const {offers, onOfferTitleClick} = this.props;
     return (
       <div className="cities__places-list places__list tabs__content">
-        {offers.map((offer, index) => {
+        {offers.map((offer) => {
           return (
             <OfferCard
               offer={offer}
@@ -31,7 +31,6 @@ class OffersList extends React.PureComponent {
               onMouseLeave={this.handleOnCardMouseLeave}
               key={offer.id}
               onOfferTitleClick={onOfferTitleClick}
-              index={index}
             />
           );
         })}
