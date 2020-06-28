@@ -1,3 +1,3 @@
-const HOUSING_TYPES = [`Apartment`, `Room`, `House`, `Hotel`];
+const HOUSING_TYPES = [`apartment`, `room`, `house`, `hotel`];
 
 export {HOUSING_TYPES};

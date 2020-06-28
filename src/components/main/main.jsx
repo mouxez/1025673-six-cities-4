@@ -3,7 +3,7 @@ import OffersList from '../offers-list/offers-list';
 import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 
-const Main = ({offers, onLogoButtonClick}) => {
+const Main = ({offers, onOfferTitleClick}) => {
 
   return (
     <div className="page page--gray page--main">
@@ -11,7 +11,7 @@ const Main = ({offers, onLogoButtonClick}) => {
         <div className="container">
           <div className="header__wrapper">
             <div className="header__left">
-              <a onClick={onLogoButtonClick} className="header__logo-link header__logo-link--active">
+              <a className="header__logo-link header__logo-link--active">
                 <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41" />
               </a>
             </div>
@@ -88,7 +88,7 @@ const Main = ({offers, onLogoButtonClick}) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <OffersList offers={offers} />
+              <OffersList offers={offers} onOfferTitleClick={onOfferTitleClick}/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
@@ -104,7 +104,7 @@ Main.propTypes = {
   offers: PropTypes.arrayOf(
       offerType.isRequired
   ).isRequired,
-  onLogoButtonClick: PropTypes.func.isRequired,
+  onOfferTitleClick: PropTypes.func.isRequired,
 };
 
 export default Main;

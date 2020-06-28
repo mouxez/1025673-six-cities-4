@@ -20,7 +20,7 @@ exports[`OfferCard should render correctly 1`] = `
       href="/"
     >
       <img
-        alt="Some photo description"
+        alt="property image"
         className="place-card__image"
         height="200"
         src="http://picsum.photos/260/200?r=1"
@@ -41,7 +41,7 @@ exports[`OfferCard should render correctly 1`] = `
           className="place-card__price-value"
         >
           €
-          100
+          110
         </b>
         <span
           className="place-card__price-text"
@@ -92,14 +92,15 @@ exports[`OfferCard should render correctly 1`] = `
     >
       <a
         href="/"
+        onClick={[Function]}
       >
-        Some place description
+        Beautiful & luxurious studio at great location
       </a>
     </h2>
     <p
       className="place-card__type"
     >
-      Apartment
+      apartment
     </p>
   </div>
 </article>
