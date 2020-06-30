@@ -2,7 +2,7 @@ import React from 'react';
 import {offerType} from '../../types/offer';
 import PropTypes from 'prop-types';
 
-const OfferCard = ({offer, onMouseEnter, onMouseLeave, onOfferTitleClick}) => {
+const OfferCard = ({offer, onMouseEnter, onOfferTitleClick}) => {
 
   const {isPremium, previewImage, price, isFavorite, title, rating, type} = offer;
 
@@ -15,7 +15,6 @@ const OfferCard = ({offer, onMouseEnter, onMouseLeave, onOfferTitleClick}) => {
     <article
       className="cities__place-card place-card"
       onMouseEnter={() => onMouseEnter(offer)}
-      onMouseLeave={onMouseLeave}
     >
       {isPremium ? <div className="place-card__mark">
         <span>Premium</span>
@@ -56,7 +55,6 @@ const OfferCard = ({offer, onMouseEnter, onMouseLeave, onOfferTitleClick}) => {
 OfferCard.propTypes = {
   offer: offerType.isRequired,
   onMouseEnter: PropTypes.func.isRequired,
-  onMouseLeave: PropTypes.func.isRequired,
   onOfferTitleClick: PropTypes.func.isRequired,
 };
 

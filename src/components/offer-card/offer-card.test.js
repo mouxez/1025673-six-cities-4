@@ -8,7 +8,6 @@ test(`OfferCard should render correctly`, () => {
       <OfferCard
         offer={offers[0]}
         onMouseEnter={jest.fn()}
-        onMouseLeave={jest.fn()}
         index={1}
         onOfferTitleClick={jest.fn()}
       />
