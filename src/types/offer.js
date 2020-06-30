@@ -20,6 +20,10 @@ const offerType = PropTypes.shape({
   price: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(HOUSING_TYPES).isRequired,
+  location: PropTypes.shape({
+    latitude: PropTypes.number.isRequired,
+    longitude: PropTypes.number.isRequired,
+  })
 });
 
 export {offerType};

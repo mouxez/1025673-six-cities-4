@@ -2,6 +2,7 @@ import React from 'react';
 import OffersList from '../offers-list/offers-list';
 import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
+import Map from '../map/map';
 
 const Main = ({offers, onOfferTitleClick}) => {
 
@@ -91,7 +92,9 @@ const Main = ({offers, onOfferTitleClick}) => {
               <OffersList offers={offers} onOfferTitleClick={onOfferTitleClick}/>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <section className="cities__map map">
+                <Map offers={offers} />
+              </section>
             </div>
           </div>
         </div>
