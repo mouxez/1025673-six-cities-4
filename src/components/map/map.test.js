@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from './app';
+import Map from './map';
 import {offers} from '../../test-data/offers';
 
-test(`App should render correctly`, () => {
-  const tree = renderer.create(<App offers={offers} />).toJSON();
+test(`Map should render correctly`, () => {
+  const tree = renderer.create(<Map offers={offers} />).toJSON();
 
   expect(tree).toMatchSnapshot();
 });
