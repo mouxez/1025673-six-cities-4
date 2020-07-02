@@ -1,5 +1,6 @@
 const reviews = [
   {
+    "id": 1,
     "avatarUrl": `http://picsum.photos/90/90?r=1`,
     "user": `John`,
     "rating": 3.3,
