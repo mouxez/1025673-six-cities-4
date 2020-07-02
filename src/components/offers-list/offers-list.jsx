@@ -7,23 +7,16 @@ class OffersList extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    this.state = {
-      activeCard: null,
-    };
-    this.handleOnCardMouseEnter = this._handleOnCardMouseEnter.bind(this);
-  }
-  _handleOnCardMouseEnter(offer) {
-    this.setState({activeCard: offer});
   }
   render() {
-    const {offers, onOfferTitleClick} = this.props;
+    const {offers, onOfferTitleClick, onMouseEnter} = this.props;
     return (
       <div className="cities__places-list places__list tabs__content">
         {offers.map((offer) => {
           return (
             <OfferCard
               offer={offer}
-              onMouseEnter={this.handleOnCardMouseEnter}
+              onMouseEnter={onMouseEnter}
               key={offer.id}
               onOfferTitleClick={onOfferTitleClick}
             />
@@ -39,6 +32,7 @@ OffersList.propTypes = {
       offerType.isRequired
   ).isRequired,
   onOfferTitleClick: PropTypes.func.isRequired,
+  onMouseEnter: PropTypes.func.isRequired,
 };
 
 export default OffersList;

@@ -9,21 +9,30 @@ class App extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      activeOffer: null,
+      activeOfferTitle: null,
+      activeOfferData: null,
     };
     this.handleOfferTitleClick = this.handleOfferTitleClick.bind(this);
+    this.handleCardMouseEnter = this.handleMouseEnter.bind(this);
   }
   handleOfferTitleClick(offer) {
-    this.setState({activeOffer: offer});
+    this.setState({activeOfferTitle: offer});
+  }
+  handleMouseEnter(offer) {
+    this.setState({activeOfferData: offer});
   }
   _renderMain() {
-    if (this.state.activeOffer) {
+    if (this.state.activeOfferTitle) {
       return (
-        <OfferDetailed offer={this.state.activeOffer} />
+        <OfferDetailed offer={this.state.activeOfferTitle} />
       );
     } else {
       return (
-        <Main offers={this.props.offers} onOfferTitleClick={this.handleOfferTitleClick} />
+        <Main
+          offers={this.props.offers}
+          onOfferTitleClick={this.handleOfferTitleClick}
+          onMouseEnter={this.handleCardMouseEnter}
+        />
       );
     }
   }
