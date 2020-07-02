@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 import Leaflet from 'leaflet';
 import {offerType} from '../../types/offer';
 
+const startCityCoordinates = [52.38333, 4.9];
+const zoom = 12;
+
+const customIcon = Leaflet.icon({
+  iconUrl: `img/pin.svg`,
+  iconSize: [30, 30]
+});
+
 class Map extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -16,13 +24,6 @@ class Map extends React.PureComponent {
     }
 
     const {offers} = this.props;
-    const startCityCoordinates = [52.38333, 4.9];
-    const zoom = 12;
-
-    const customIcon = Leaflet.icon({
-      iconUrl: `img/pin.svg`,
-      iconSize: [30, 30]
-    });
 
     this.map = Leaflet.map(this.mapRef.current, {
       zoom,
