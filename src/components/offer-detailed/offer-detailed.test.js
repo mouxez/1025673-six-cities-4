@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import OfferDetailed from './offer-detailed';
-import {offers} from '../../mock/offers';
+import {offers} from '../../test-data/offers';
 
 test(`OfferDetailed should render correctly`, () => {
   const tree = renderer.create(

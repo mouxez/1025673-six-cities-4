@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import OfferCard from './offer-card.jsx';
-import {offers} from '../../mock/offers';
+import {offers} from '../../test-data/offers';
 
 Enzyme.configure({
   adapter: new Adapter(),
@@ -19,7 +19,6 @@ describe(`OfferCard e2e test`, () => {
         <OfferCard
           offer={offers[0]}
           onMouseEnter={onMouseEnter}
-          onMouseLeave={jest.fn()}
           index={1}
           onOfferTitleClick={jest.fn()}
         />
@@ -39,7 +38,6 @@ describe(`OfferCard e2e test`, () => {
         <OfferCard
           offer={offers[0]}
           onMouseEnter={jest.fn()}
-          onMouseLeave={jest.fn()}
           index={offerIndex}
           onOfferTitleClick={OfferTitleClick}
         />

@@ -226,7 +226,6 @@ exports[`Main should render correctly 1`] = `
             <article
               className="cities__place-card place-card"
               onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="place-card__mark"
@@ -329,7 +328,6 @@ exports[`Main should render correctly 1`] = `
             <article
               className="cities__place-card place-card"
               onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               
               <div
@@ -428,7 +426,6 @@ exports[`Main should render correctly 1`] = `
             <article
               className="cities__place-card place-card"
               onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="place-card__mark"
@@ -533,7 +530,6 @@ exports[`Main should render correctly 1`] = `
             <article
               className="cities__place-card place-card"
               onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
               <div
                 className="place-card__mark"
@@ -640,7 +636,16 @@ exports[`Main should render correctly 1`] = `
         >
           <section
             className="cities__map map"
-          />
+          >
+            <div
+              style={
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </section>
         </div>
       </div>
     </div>

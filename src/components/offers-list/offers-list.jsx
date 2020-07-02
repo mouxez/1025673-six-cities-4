@@ -11,13 +11,9 @@ class OffersList extends React.PureComponent {
       activeCard: null,
     };
     this.handleOnCardMouseEnter = this._handleOnCardMouseEnter.bind(this);
-    this.handleOnCardMouseLeave = this._handleOnCardMouseLeave.bind(this);
   }
   _handleOnCardMouseEnter(offer) {
     this.setState({activeCard: offer});
-  }
-  _handleOnCardMouseLeave() {
-    this.setState({activeCard: {}});
   }
   render() {
     const {offers, onOfferTitleClick} = this.props;
@@ -28,7 +24,6 @@ class OffersList extends React.PureComponent {
             <OfferCard
               offer={offer}
               onMouseEnter={this.handleOnCardMouseEnter}
-              onMouseLeave={this.handleOnCardMouseLeave}
               key={offer.id}
               onOfferTitleClick={onOfferTitleClick}
             />
