@@ -24,7 +24,11 @@ class App extends React.PureComponent {
   _renderMain() {
     if (this.state.activeOfferTitle) {
       return (
-        <OfferDetailed offer={this.state.activeOfferTitle} />
+        <OfferDetailed
+          offer={this.state.activeOfferTitle}
+          onOfferTitleClick={this.handleOfferTitleClick}
+          onMouseEnter={this.handleCardMouseEnter}
+        />
       );
     } else {
       return (
@@ -46,7 +50,9 @@ class App extends React.PureComponent {
             {this._renderMain()}
           </Route>
           <Route exact path="/dev-detailed">
-            <OfferDetailed offer={offers[0]} />
+            <OfferDetailed
+              offer={offers[0]}
+            />
           </Route>
         </Switch>
       </BrowserRouter>

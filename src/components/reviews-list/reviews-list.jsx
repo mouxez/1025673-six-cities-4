@@ -9,11 +9,11 @@ const ReviewsList = ({reviews}) => {
     <>
       <h2 className="reviews__title">Reviews &middot; <span className="reviews__amount">{reviewsCount}</span></h2>
       <ul className="reviews__list">
-        {reviews.map((review) => {
+        {reviews.length > 0 ? reviews.map((review) => {
           return (
             <ReviewsItem review={review} key={review.id} />
           );
-        })}
+        }) : null}
       </ul>
     </>
   );
