@@ -6,6 +6,8 @@ import Map from '../map/map';
 import {offers} from '../../mock/offers';
 import NearPlacesList from '../near-places-list/near-places-list';
 
+const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 10);
+
 const OfferDetailed = ({offer}) => {
   const {images, isPremium, title, isFavorite, type, rating, bedrooms, maxAdults, price, goods, host, description} = offer;
   const {name, avatarUrl} = host;
@@ -115,7 +117,7 @@ const OfferDetailed = ({offer}) => {
                 </div>
               </div>
               <section className="property__reviews reviews">
-                <ReviewsList reviews={reviews} />
+                <ReviewsList reviews={filteredReviews} />
                 <form className="reviews__form form" action="#" method="post">
                   <label className="reviews__label form__label" htmlFor="review">Your review</label>
                   <div className="reviews__rating-form form__rating">
