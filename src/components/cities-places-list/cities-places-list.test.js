@@ -7,7 +7,7 @@ test(`OfferList should render correctlt`, () => {
   const tree = renderer.create(
       <OfferList offers={offers}
         onOfferTitleClick={jest.fn()}
-        onMouseEnter={jest.fn()}
+        onPlaceCardMouseEnter={jest.fn()}
       />).toJSON();
 
   expect(tree).toMatchSnapshot();

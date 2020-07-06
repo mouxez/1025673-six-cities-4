@@ -12,13 +12,13 @@ const mockEvent = {
   preventDefault() {},
 };
 describe(`CitiesPlaceCard e2e test`, () => {
-  test(`CitiesPlaceCard should pass offer data to event handler during onMouseEnter event`, () => {
-    const onMouseEnter = jest.fn();
+  test(`CitiesPlaceCard should pass offer data to event handler during onPlaceCardMouseEnter event`, () => {
+    const onPlaceCardMouseEnter = jest.fn();
 
     const citiesPlaceCard = shallow(
         <CitiesPlaceCard
           offer={offers[0]}
-          onMouseEnter={onMouseEnter}
+          onPlaceCardMouseEnter={onPlaceCardMouseEnter}
           index={1}
           onOfferTitleClick={jest.fn()}
         />
@@ -27,7 +27,7 @@ describe(`CitiesPlaceCard e2e test`, () => {
     const activeOffer = citiesPlaceCard.find(`.place-card`);
     activeOffer.simulate(`mouseenter`, {});
 
-    expect(onMouseEnter.mock.calls[0][0]).toMatchObject(offers[0]);
+    expect(onPlaceCardMouseEnter.mock.calls[0][0]).toMatchObject(offers[0]);
   });
   test(`should render PageMainProperty component on title click`, () => {
     const OfferTitleClick = jest.fn();
@@ -37,7 +37,7 @@ describe(`CitiesPlaceCard e2e test`, () => {
     const citiesPlaceCard = shallow(
         <CitiesPlaceCard
           offer={offers[0]}
-          onMouseEnter={jest.fn()}
+          onPlaceCardMouseEnter={jest.fn()}
           index={offerIndex}
           onOfferTitleClick={OfferTitleClick}
         />

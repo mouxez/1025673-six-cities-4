@@ -8,7 +8,7 @@ test(`ReviewsItem should render correctly`, () => {
       <NearPlaceCard
         offer={offers[0]}
         onOfferTitleClick={jest.fn()}
-        onMouseEnter={jest.fn()}
+        onPlaceCardMouseEnter={jest.fn()}
       />
   ).toJSON();
 

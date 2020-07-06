@@ -31,7 +31,7 @@ class NearPlacesList extends React.PureComponent {
               key={offer.id}
               offer={offer}
               onOfferTitleClick={this.handleOfferTitleClick}
-              onMouseEnter={this.handleCardMouseEnter}
+              onPlaceCardMouseEnter={this.handleCardMouseEnter}
             />);
         })}
       </div>

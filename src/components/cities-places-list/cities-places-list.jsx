@@ -9,14 +9,14 @@ class CitiesPlacesList extends React.PureComponent {
 
   }
   render() {
-    const {offers, onOfferTitleClick, onMouseEnter} = this.props;
+    const {offers, onOfferTitleClick, onPlaceCardMouseEnter} = this.props;
     return (
       <div className="cities__places-list places__list tabs__content">
         {offers.map((offer) => {
           return (
             <CitiesPlaceCard
               offer={offer}
-              onMouseEnter={onMouseEnter}
+              onPlaceCardMouseEnter={onPlaceCardMouseEnter}
               key={offer.id}
               onOfferTitleClick={onOfferTitleClick}
             />
@@ -32,7 +32,7 @@ CitiesPlacesList.propTypes = {
       offerType.isRequired
   ).isRequired,
   onOfferTitleClick: PropTypes.func.isRequired,
-  onMouseEnter: PropTypes.func.isRequired,
+  onPlaceCardMouseEnter: PropTypes.func.isRequired,
 };
 
 export default CitiesPlacesList;

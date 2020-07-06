@@ -7,7 +7,7 @@ test(`CitiesPlaceCard should render correctly`, () => {
   const tree = renderer.create(
       <CitiesPlaceCard
         offer={offers[0]}
-        onMouseEnter={jest.fn()}
+        onPlaceCardMouseEnter={jest.fn()}
         index={1}
         onOfferTitleClick={jest.fn()}
       />

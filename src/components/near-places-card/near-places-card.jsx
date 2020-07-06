@@ -2,7 +2,7 @@ import React from 'react';
 import {offerType} from '../../types/offer';
 import PropTypes from 'prop-types';
 
-const NearPlacesCard = ({offer, onOfferTitleClick, onMouseEnter}) => {
+const NearPlacesCard = ({offer, onOfferTitleClick, onPlaceCardMouseEnter}) => {
   const {previewImage, price, isFavorite, title, rating, type} = offer;
 
   const handleOfferTitleClick = (evt) => {
@@ -12,7 +12,7 @@ const NearPlacesCard = ({offer, onOfferTitleClick, onMouseEnter}) => {
 
   return (
     <article className="near-places__card place-card"
-      onMouseEnter={() => onMouseEnter(offer)}
+      onMouseEnter={() => onPlaceCardMouseEnter(offer)}
     >
       <div className="near-places__image-wrapper place-card__image-wrapper">
         <a href="#">
@@ -50,7 +50,7 @@ const NearPlacesCard = ({offer, onOfferTitleClick, onMouseEnter}) => {
 NearPlacesCard.propTypes = {
   offer: offerType.isRequired,
   onOfferTitleClick: PropTypes.func.isRequired,
-  onMouseEnter: PropTypes.func.isRequired,
+  onPlaceCardMouseEnter: PropTypes.func.isRequired,
 };
 
 export default NearPlacesCard;
