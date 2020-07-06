@@ -12,6 +12,7 @@ const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.dat
 const PageMainProperty = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
   const {images, isPremium, title, isFavorite, type, rating, bedrooms, maxAdults, price, goods, host, description} = offer;
   const {name, avatarUrl} = host;
+  const offersToShow = offers.slice(0, 3);
 
   return (
     <div className="page">
@@ -169,14 +170,17 @@ const PageMainProperty = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter})
             </div>
           </div>
           <section className="property__map map">
-            <Map offers={offers.slice(0, 3)}/>
+            <Map
+              offers={offersToShow}
+              currentOffer={offer}
+            />
           </section>
         </section>
         <div className="container">
           <section className="near-places places">
             <h2 className="near-places__title">Other places in the neighbourhood</h2>
             <CitiesPlacesList
-              offers={offers.slice(0, 3)}
+              offers={offersToShow}
               onPlaceCardTitleClick={onPlaceCardTitleClick}
               onPlaceCardMouseEnter={onPlaceCardMouseEnter}
               isNearPlacesCard

@@ -11,6 +11,11 @@ const customIcon = Leaflet.icon({
   iconSize: [30, 30]
 });
 
+const currentIcon = Leaflet.icon({
+  iconUrl: `pin-active.svg`,
+  iconSize: [30, 30]
+});
+
 class Map extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -18,12 +23,15 @@ class Map extends React.PureComponent {
     this.map = null;
   }
 
+  _renderMapMarkers() {
+    const {offers} = this.props;
+    offers.forEach((offer) => Leaflet.marker(Object.values(offer.location), {customIcon}).addTo(this.map));
+  }
+
   componentDidMount() {
     if (!this.mapRef.current) {
       return;
     }
-
-    const {offers} = this.props;
 
     this.map = Leaflet.map(this.mapRef.current, {
       zoom,
@@ -38,7 +46,14 @@ class Map extends React.PureComponent {
       attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>`
     }).addTo(this.map);
 
-    offers.forEach((offer) => Leaflet.marker(Object.values(offer.location), {customIcon}).addTo(this.map));
+    const {currentOffer} = this.props;
+    if (currentOffer) {
+      Leaflet.marker(Object.values(currentOffer.location), {currentIcon}).addTo(this.map);
+      this._renderMapMarkers();
+    } else {
+      this._renderMapMarkers();
+    }
+
   }
 
   render() {
@@ -50,6 +65,7 @@ Map.propTypes = {
   offers: PropTypes.arrayOf(
       offerType.isRequired
   ).isRequired,
+  currentOffer: offerType,
 };
 
 export default Map;
