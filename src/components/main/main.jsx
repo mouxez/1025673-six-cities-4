@@ -5,7 +5,6 @@ import {offerType} from '../../types/offer';
 import Map from '../map/map';
 
 const Main = ({offers, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
-
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -89,7 +88,11 @@ const Main = ({offers, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <CitiesPlacesList offers={offers} onPlaceCardTitleClick={onPlaceCardTitleClick} onPlaceCardMouseEnter={onPlaceCardMouseEnter} />
+              <CitiesPlacesList
+                offers={offers}
+                onPlaceCardTitleClick={onPlaceCardTitleClick}
+                onPlaceCardMouseEnter={onPlaceCardMouseEnter}
+              />
             </section>
             <div className="cities__right-section">
               <section className="cities__map map">

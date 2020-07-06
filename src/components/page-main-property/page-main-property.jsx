@@ -4,11 +4,12 @@ import {reviews} from '../../mock/reviews';
 import ReviewsList from '../reviews-list/reviews-list';
 import Map from '../map/map';
 import {offers} from '../../mock/offers';
-import NearPlacesList from '../near-places-list/near-places-list';
+import CitiesPlacesList from '../cities-places-list/cities-places-list';
+import PropTypes from 'prop-types';
 
 const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 10);
 
-const PageMainProperty = ({offer}) => {
+const PageMainProperty = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
   const {images, isPremium, title, isFavorite, type, rating, bedrooms, maxAdults, price, goods, host, description} = offer;
   const {name, avatarUrl} = host;
 
@@ -174,7 +175,12 @@ const PageMainProperty = ({offer}) => {
         <div className="container">
           <section className="near-places places">
             <h2 className="near-places__title">Other places in the neighbourhood</h2>
-            <NearPlacesList offers={offers.slice(0, 3)} />
+            <CitiesPlacesList
+              offers={offers.slice(0, 3)}
+              onPlaceCardTitleClick={onPlaceCardTitleClick}
+              onPlaceCardMouseEnter={onPlaceCardMouseEnter}
+              isNearPlacesCard
+            />
           </section>
         </div>
       </main>
@@ -184,6 +190,8 @@ const PageMainProperty = ({offer}) => {
 
 PageMainProperty.propTypes = {
   offer: offerType.isRequired,
+  onPlaceCardTitleClick: PropTypes.func.isRequired,
+  onPlaceCardMouseEnter: PropTypes.func.isRequired,
 };
 
 export default PageMainProperty;

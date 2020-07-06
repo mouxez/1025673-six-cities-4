@@ -2,7 +2,7 @@ import React from 'react';
 import {offerType} from '../../types/offer';
 import PropTypes from 'prop-types';
 
-const CitiesPlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick}) => {
+const CitiesPlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick, isNearPlacesCard}) => {
 
   const {isPremium, previewImage, price, isFavorite, title, rating, type} = offer;
 
@@ -11,15 +11,16 @@ const CitiesPlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick}) 
     onPlaceCardTitleClick(offer);
   };
 
+  const getPremiumMark = () => isPremium ? <div className="place-card__mark"><span>Premium</span></div> : ``;
+
   return (
+
     <article
-      className="cities__place-card place-card"
+      className={isNearPlacesCard ? `near-places__card place-card` : `cities__place-card place-card`}
       onMouseEnter={() => onPlaceCardMouseEnter(offer)}
     >
-      {isPremium ? <div className="place-card__mark">
-        <span>Premium</span>
-      </div> : ``}
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      {isNearPlacesCard ? getPremiumMark() : ``}
+      <div className={isNearPlacesCard ? `near-places__image-wrapper place-card__image-wrapper` : `cities__image-wrapper place-card__image-wrapper`}>
         <a href="/">
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="property image" />
         </a>
@@ -56,6 +57,7 @@ CitiesPlaceCard.propTypes = {
   offer: offerType.isRequired,
   onPlaceCardTitleClick: PropTypes.func.isRequired,
   onPlaceCardMouseEnter: PropTypes.func.isRequired,
+  isNearPlacesCard: PropTypes.bool,
 };
 
 export default CitiesPlaceCard;

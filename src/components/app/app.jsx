@@ -52,6 +52,8 @@ class App extends React.PureComponent {
           <Route exact path="/dev-detailed">
             <PageMainProperty
               offer={offers[0]}
+              onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
+              onPlaceCardMouseEnter={this.handlePlaceCardMouseEnter}
             />
           </Route>
         </Switch>

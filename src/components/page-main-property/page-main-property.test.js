@@ -7,6 +7,8 @@ test(`PageMainProperty should render correctly`, () => {
   const tree = renderer.create(
       <PageMainProperty
         offer={offers[0]}
+        onPlaceCardTitleClick={jest.fn()}
+        onPlaceCardMouseEnter={jest.fn()}
       />
   ).toJSON();
 

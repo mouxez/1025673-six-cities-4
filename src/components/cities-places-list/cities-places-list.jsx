@@ -9,16 +9,17 @@ class CitiesPlacesList extends React.PureComponent {
 
   }
   render() {
-    const {offers, onPlaceCardTitleClick, onPlaceCardMouseEnter} = this.props;
+    const {offers, onPlaceCardTitleClick, onPlaceCardMouseEnter, isNearPlacesCard} = this.props;
     return (
-      <div className="cities__places-list places__list tabs__content">
+      <div className={isNearPlacesCard ? `near-places__list places__list` : `cities__places-list places__list tabs__content`}>
         {offers.map((offer) => {
           return (
             <CitiesPlaceCard
+              key={offer.id}
               offer={offer}
               onPlaceCardMouseEnter={onPlaceCardMouseEnter}
-              key={offer.id}
               onPlaceCardTitleClick={onPlaceCardTitleClick}
+              isNearPlacesCard={isNearPlacesCard}
             />
           );
         })}
@@ -33,6 +34,7 @@ CitiesPlacesList.propTypes = {
   ).isRequired,
   onPlaceCardTitleClick: PropTypes.func.isRequired,
   onPlaceCardMouseEnter: PropTypes.func.isRequired,
+  isNearPlacesCard: PropTypes.bool,
 };
 
 export default CitiesPlacesList;
