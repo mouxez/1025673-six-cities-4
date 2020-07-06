@@ -12,10 +12,10 @@ class App extends React.PureComponent {
       activeOfferTitle: null,
       activeOfferData: null,
     };
-    this.handleOfferTitleClick = this.handleOfferTitleClick.bind(this);
+    this.handlePlaceCardTitleClick = this.handlePlaceCardTitleClick.bind(this);
     this.handlePlaceCardMouseEnter = this.handlePlaceCardMouseEnter.bind(this);
   }
-  handleOfferTitleClick(offer) {
+  handlePlaceCardTitleClick(offer) {
     this.setState({activeOfferTitle: offer});
   }
   handlePlaceCardMouseEnter(offer) {
@@ -26,7 +26,7 @@ class App extends React.PureComponent {
       return (
         <PageMainProperty
           offer={this.state.activeOfferTitle}
-          onOfferTitleClick={this.handleOfferTitleClick}
+          onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
           onPlaceCardMouseEnter={this.handlePlaceCardMouseEnter}
         />
       );
@@ -34,7 +34,7 @@ class App extends React.PureComponent {
       return (
         <Main
           offers={this.props.offers}
-          onOfferTitleClick={this.handleOfferTitleClick}
+          onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
           onPlaceCardMouseEnter={this.handlePlaceCardMouseEnter}
         />
       );

@@ -6,7 +6,7 @@ import {offers} from '../../test-data/offers';
 test(`OfferList should render correctlt`, () => {
   const tree = renderer.create(
       <OfferList offers={offers}
-        onOfferTitleClick={jest.fn()}
+        onPlaceCardTitleClick={jest.fn()}
         onPlaceCardMouseEnter={jest.fn()}
       />).toJSON();
 

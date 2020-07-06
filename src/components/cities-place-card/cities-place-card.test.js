@@ -9,7 +9,7 @@ test(`CitiesPlaceCard should render correctly`, () => {
         offer={offers[0]}
         onPlaceCardMouseEnter={jest.fn()}
         index={1}
-        onOfferTitleClick={jest.fn()}
+        onPlaceCardTitleClick={jest.fn()}
       />
   ).toJSON();
 

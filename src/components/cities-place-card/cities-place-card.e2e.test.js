@@ -20,7 +20,7 @@ describe(`CitiesPlaceCard e2e test`, () => {
           offer={offers[0]}
           onPlaceCardMouseEnter={onPlaceCardMouseEnter}
           index={1}
-          onOfferTitleClick={jest.fn()}
+          onPlaceCardTitleClick={jest.fn()}
         />
     );
 
@@ -39,7 +39,7 @@ describe(`CitiesPlaceCard e2e test`, () => {
           offer={offers[0]}
           onPlaceCardMouseEnter={jest.fn()}
           index={offerIndex}
-          onOfferTitleClick={OfferTitleClick}
+          onPlaceCardTitleClick={OfferTitleClick}
         />
     );
 

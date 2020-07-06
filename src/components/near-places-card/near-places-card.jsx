@@ -2,12 +2,12 @@ import React from 'react';
 import {offerType} from '../../types/offer';
 import PropTypes from 'prop-types';
 
-const NearPlacesCard = ({offer, onOfferTitleClick, onPlaceCardMouseEnter}) => {
+const NearPlacesCard = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
   const {previewImage, price, isFavorite, title, rating, type} = offer;
 
-  const handleOfferTitleClick = (evt) => {
+  const handlePlaceCardTitleClick = (evt) => {
     evt.preventDefault();
-    onOfferTitleClick(offer);
+    onPlaceCardTitleClick(offer);
   };
 
   return (
@@ -39,7 +39,7 @@ const NearPlacesCard = ({offer, onOfferTitleClick, onPlaceCardMouseEnter}) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#" onClick={handleOfferTitleClick}>{title}</a>
+          <a href="#" onClick={handlePlaceCardTitleClick}>{title}</a>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>
@@ -49,7 +49,7 @@ const NearPlacesCard = ({offer, onOfferTitleClick, onPlaceCardMouseEnter}) => {
 
 NearPlacesCard.propTypes = {
   offer: offerType.isRequired,
-  onOfferTitleClick: PropTypes.func.isRequired,
+  onPlaceCardTitleClick: PropTypes.func.isRequired,
   onPlaceCardMouseEnter: PropTypes.func.isRequired,
 };
 

@@ -7,7 +7,7 @@ test(`ReviewsItem should render correctly`, () => {
   const tree = renderer.create(
       <NearPlaceCard
         offer={offers[0]}
-        onOfferTitleClick={jest.fn()}
+        onPlaceCardTitleClick={jest.fn()}
         onPlaceCardMouseEnter={jest.fn()}
       />
   ).toJSON();

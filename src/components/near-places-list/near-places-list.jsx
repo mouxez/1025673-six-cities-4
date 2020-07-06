@@ -11,11 +11,11 @@ class NearPlacesList extends React.PureComponent {
       activeOfferTitle: null,
       activeOfferData: null,
     };
-    this.handleOfferTitleClick = this.handleOfferTitleClick.bind(this);
+    this.handlePlaceCardTitleClick = this.handlePlaceCardTitleClick.bind(this);
     this.handleCardMouseEnter = this.handleCardMouseEnter.bind(this);
   }
 
-  handleOfferTitleClick(offer) {
+  handlePlaceCardTitleClick(offer) {
     this.setState({activeOfferTitle: offer});
   }
   handleCardMouseEnter(offer) {
@@ -30,7 +30,7 @@ class NearPlacesList extends React.PureComponent {
             <NearPlacesCard
               key={offer.id}
               offer={offer}
-              onOfferTitleClick={this.handleOfferTitleClick}
+              onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
               onPlaceCardMouseEnter={this.handleCardMouseEnter}
             />);
         })}

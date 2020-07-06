@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 import Map from '../map/map';
 
-const Main = ({offers, onOfferTitleClick, onPlaceCardMouseEnter}) => {
+const Main = ({offers, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
 
   return (
     <div className="page page--gray page--main">
@@ -89,7 +89,7 @@ const Main = ({offers, onOfferTitleClick, onPlaceCardMouseEnter}) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <CitiesPlacesList offers={offers} onOfferTitleClick={onOfferTitleClick} onPlaceCardMouseEnter={onPlaceCardMouseEnter} />
+              <CitiesPlacesList offers={offers} onPlaceCardTitleClick={onPlaceCardTitleClick} onPlaceCardMouseEnter={onPlaceCardMouseEnter} />
             </section>
             <div className="cities__right-section">
               <section className="cities__map map">
@@ -107,7 +107,7 @@ Main.propTypes = {
   offers: PropTypes.arrayOf(
       offerType.isRequired
   ).isRequired,
-  onOfferTitleClick: PropTypes.func.isRequired,
+  onPlaceCardTitleClick: PropTypes.func.isRequired,
   onPlaceCardMouseEnter: PropTypes.func.isRequired,
 };
 
