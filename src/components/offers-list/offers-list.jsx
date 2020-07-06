@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import OfferCard from '../offer-card/offer-card';
+import CitiesPlaceCard from '../cities-place-card/cities-place-card';
 import {offerType} from '../../types/offer';
 
 class OffersList extends React.PureComponent {
@@ -14,7 +14,7 @@ class OffersList extends React.PureComponent {
       <div className="cities__places-list places__list tabs__content">
         {offers.map((offer) => {
           return (
-            <OfferCard
+            <CitiesPlaceCard
               offer={offer}
               onMouseEnter={onMouseEnter}
               key={offer.id}

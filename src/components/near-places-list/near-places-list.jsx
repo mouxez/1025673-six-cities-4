@@ -12,13 +12,13 @@ class NearPlacesList extends React.PureComponent {
       activeOfferData: null,
     };
     this.handleOfferTitleClick = this.handleOfferTitleClick.bind(this);
-    this.handleCardMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleCardMouseEnter = this.handleCardMouseEnter.bind(this);
   }
 
   handleOfferTitleClick(offer) {
     this.setState({activeOfferTitle: offer});
   }
-  handleMouseEnter(offer) {
+  handleCardMouseEnter(offer) {
     this.setState({activeOfferData: offer});
   }
 

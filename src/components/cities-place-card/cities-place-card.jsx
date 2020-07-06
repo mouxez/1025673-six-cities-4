@@ -2,7 +2,7 @@ import React from 'react';
 import {offerType} from '../../types/offer';
 import PropTypes from 'prop-types';
 
-const OfferCard = ({offer, onMouseEnter, onOfferTitleClick}) => {
+const CitiesPlaceCard = ({offer, onMouseEnter, onOfferTitleClick}) => {
 
   const {isPremium, previewImage, price, isFavorite, title, rating, type} = offer;
 
@@ -52,10 +52,10 @@ const OfferCard = ({offer, onMouseEnter, onOfferTitleClick}) => {
   );
 };
 
-OfferCard.propTypes = {
+CitiesPlaceCard.propTypes = {
   offer: offerType.isRequired,
   onOfferTitleClick: PropTypes.func.isRequired,
   onMouseEnter: PropTypes.func.isRequired,
 };
 
-export default OfferCard;
+export default CitiesPlaceCard;

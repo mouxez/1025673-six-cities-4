@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import OfferCard from './offer-card';
+import CitiesPlaceCard from './cities-place-card';
 import {offers} from '../../test-data/offers';
 
-test(`OfferCard should render correctly`, () => {
+test(`CitiesPlaceCard should render correctly`, () => {
   const tree = renderer.create(
-      <OfferCard
+      <CitiesPlaceCard
         offer={offers[0]}
         onMouseEnter={jest.fn()}
         index={1}
