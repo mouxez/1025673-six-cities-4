@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CitiesPlaceCard from '../cities-place-card/cities-place-card';
 import {offerType} from '../../types/offer';
 
-class OffersList extends React.PureComponent {
+class CitiesPlacesList extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -27,7 +27,7 @@ class OffersList extends React.PureComponent {
   }
 }
 
-OffersList.propTypes = {
+CitiesPlacesList.propTypes = {
   offers: PropTypes.arrayOf(
       offerType.isRequired
   ).isRequired,
@@ -35,4 +35,4 @@ OffersList.propTypes = {
   onMouseEnter: PropTypes.func.isRequired,
 };
 
-export default OffersList;
+export default CitiesPlacesList;

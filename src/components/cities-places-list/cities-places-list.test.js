@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import OfferList from '../offers-list/offers-list';
+import OfferList from './cities-places-list';
 import {offers} from '../../test-data/offers';
 
 test(`OfferList should render correctlt`, () => {

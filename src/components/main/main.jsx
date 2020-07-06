@@ -1,5 +1,5 @@
 import React from 'react';
-import OffersList from '../offers-list/offers-list';
+import CitiesPlacesList from '../cities-places-list/cities-places-list';
 import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 import Map from '../map/map';
@@ -89,7 +89,7 @@ const Main = ({offers, onOfferTitleClick, onMouseEnter}) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <OffersList offers={offers} onOfferTitleClick={onOfferTitleClick} onMouseEnter={onMouseEnter} />
+              <CitiesPlacesList offers={offers} onOfferTitleClick={onOfferTitleClick} onMouseEnter={onMouseEnter} />
             </section>
             <div className="cities__right-section">
               <section className="cities__map map">

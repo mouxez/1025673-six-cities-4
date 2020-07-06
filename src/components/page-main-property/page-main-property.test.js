@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import OfferDetailed from './offer-detailed';
+import PageMainProperty from './page-main-property';
 import {offers} from '../../test-data/offers';
 
-test(`OfferDetailed should render correctly`, () => {
+test(`PageMainProperty should render correctly`, () => {
   const tree = renderer.create(
-      <OfferDetailed
+      <PageMainProperty
         offer={offers[0]}
       />
   ).toJSON();

@@ -3,7 +3,7 @@ import Main from '../main/main';
 import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 import {Switch, Route, BrowserRouter} from "react-router-dom";
-import OfferDetailed from '../offer-detailed/offer-detailed';
+import PageMainProperty from '../page-main-property/page-main-property';
 
 class App extends React.PureComponent {
   constructor(props) {
@@ -24,7 +24,7 @@ class App extends React.PureComponent {
   _renderMain() {
     if (this.state.activeOfferTitle) {
       return (
-        <OfferDetailed
+        <PageMainProperty
           offer={this.state.activeOfferTitle}
           onOfferTitleClick={this.handleOfferTitleClick}
           onMouseEnter={this.handleCardMouseEnter}
@@ -50,7 +50,7 @@ class App extends React.PureComponent {
             {this._renderMain()}
           </Route>
           <Route exact path="/dev-detailed">
-            <OfferDetailed
+            <PageMainProperty
               offer={offers[0]}
             />
           </Route>

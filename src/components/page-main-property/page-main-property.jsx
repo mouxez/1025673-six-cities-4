@@ -8,7 +8,7 @@ import NearPlacesList from '../near-places-list/near-places-list';
 
 const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 10);
 
-const OfferDetailed = ({offer}) => {
+const PageMainProperty = ({offer}) => {
   const {images, isPremium, title, isFavorite, type, rating, bedrooms, maxAdults, price, goods, host, description} = offer;
   const {name, avatarUrl} = host;
 
@@ -182,8 +182,8 @@ const OfferDetailed = ({offer}) => {
   );
 };
 
-OfferDetailed.propTypes = {
+PageMainProperty.propTypes = {
   offer: offerType.isRequired,
 };
 
-export default OfferDetailed;
+export default PageMainProperty;
