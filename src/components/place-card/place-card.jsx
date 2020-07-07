@@ -12,15 +12,17 @@ const PlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick, isNearP
   };
 
   const getPremiumMark = () => isPremium ? <div className="place-card__mark"><span>Premium</span></div> : ``;
+  const articleClassName = `place-card ${isNearPlacesCard ? `near-places__card` : `cities__place-card`}`;
+  const imageWrapperClassName = `place-card__image-wrapper ${isNearPlacesCard ? `near-places__image-wrapper` : `cities__image-wrapper`}`;
 
   return (
 
     <article
-      className={isNearPlacesCard ? `near-places__card place-card` : `cities__place-card place-card`}
+      className={articleClassName}
       onMouseEnter={() => onPlaceCardMouseEnter(offer)}
     >
       {isNearPlacesCard ? getPremiumMark() : ``}
-      <div className={isNearPlacesCard ? `near-places__image-wrapper place-card__image-wrapper` : `cities__image-wrapper place-card__image-wrapper`}>
+      <div className={imageWrapperClassName}>
         <a href="/">
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="property image" />
         </a>

@@ -224,12 +224,12 @@ exports[`Main should render correctly 1`] = `
             className="cities__places-list places__list tabs__content"
           >
             <article
-              className="cities__place-card place-card"
+              className="place-card cities__place-card"
               onMouseEnter={[Function]}
             >
               
               <div
-                className="cities__image-wrapper place-card__image-wrapper"
+                className="place-card__image-wrapper cities__image-wrapper"
               >
                 <a
                   href="/"
@@ -320,12 +320,12 @@ exports[`Main should render correctly 1`] = `
               </div>
             </article>
             <article
-              className="cities__place-card place-card"
+              className="place-card cities__place-card"
               onMouseEnter={[Function]}
             >
               
               <div
-                className="cities__image-wrapper place-card__image-wrapper"
+                className="place-card__image-wrapper cities__image-wrapper"
               >
                 <a
                   href="/"
@@ -418,12 +418,12 @@ exports[`Main should render correctly 1`] = `
               </div>
             </article>
             <article
-              className="cities__place-card place-card"
+              className="place-card cities__place-card"
               onMouseEnter={[Function]}
             >
               
               <div
-                className="cities__image-wrapper place-card__image-wrapper"
+                className="place-card__image-wrapper cities__image-wrapper"
               >
                 <a
                   href="/"
@@ -516,12 +516,12 @@ exports[`Main should render correctly 1`] = `
               </div>
             </article>
             <article
-              className="cities__place-card place-card"
+              className="place-card cities__place-card"
               onMouseEnter={[Function]}
             >
               
               <div
-                className="cities__image-wrapper place-card__image-wrapper"
+                className="place-card__image-wrapper cities__image-wrapper"
               >
                 <a
                   href="/"
