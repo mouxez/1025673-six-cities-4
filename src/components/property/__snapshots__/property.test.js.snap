@@ -1082,7 +1082,7 @@ exports[`Property should render correctly 1`] = `
           Other places in the neighbourhood
         </h2>
         <div
-          className="near-places__list places__list"
+          className="places__list near-places__list"
         >
           <article
             className="place-card near-places__card"

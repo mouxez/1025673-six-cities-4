@@ -221,7 +221,7 @@ exports[`Main should render correctly 1`] = `
             </ul>
           </form>
           <div
-            className="cities__places-list places__list tabs__content"
+            className="places__list cities__places-list tabs__content"
           >
             <article
               className="place-card cities__place-card"
