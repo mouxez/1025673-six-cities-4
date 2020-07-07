@@ -4,7 +4,7 @@ import {reviews} from '../../mock/reviews';
 import ReviewsList from '../reviews-list/reviews-list';
 import Map from '../map/map';
 import {offers} from '../../mock/offers';
-import CitiesPlacesList from '../cities-places-list/cities-places-list';
+import PlacesList from '../places-list/places-list';
 import PropTypes from 'prop-types';
 
 const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 10);
@@ -179,7 +179,7 @@ const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
         <div className="container">
           <section className="near-places places">
             <h2 className="near-places__title">Other places in the neighbourhood</h2>
-            <CitiesPlacesList
+            <PlacesList
               offers={offersToShow}
               onPlaceCardTitleClick={onPlaceCardTitleClick}
               onPlaceCardMouseEnter={onPlaceCardMouseEnter}

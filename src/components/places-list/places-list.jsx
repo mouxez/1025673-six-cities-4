@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CitiesPlaceCard from '../cities-place-card/cities-place-card';
+import PlaceCard from '../place-card/place-card';
 import {offerType} from '../../types/offer';
 
-class CitiesPlacesList extends React.PureComponent {
+class PlacesList extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -14,7 +14,7 @@ class CitiesPlacesList extends React.PureComponent {
       <div className={isNearPlacesCard ? `near-places__list places__list` : `cities__places-list places__list tabs__content`}>
         {offers.map((offer) => {
           return (
-            <CitiesPlaceCard
+            <PlaceCard
               key={offer.id}
               offer={offer}
               onPlaceCardMouseEnter={onPlaceCardMouseEnter}
@@ -28,7 +28,7 @@ class CitiesPlacesList extends React.PureComponent {
   }
 }
 
-CitiesPlacesList.propTypes = {
+PlacesList.propTypes = {
   offers: PropTypes.arrayOf(
       offerType.isRequired
   ).isRequired,
@@ -37,4 +37,4 @@ CitiesPlacesList.propTypes = {
   isNearPlacesCard: PropTypes.bool,
 };
 
-export default CitiesPlacesList;
+export default PlacesList;

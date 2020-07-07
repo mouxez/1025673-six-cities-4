@@ -2,7 +2,7 @@ import React from 'react';
 import {offerType} from '../../types/offer';
 import PropTypes from 'prop-types';
 
-const CitiesPlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick, isNearPlacesCard}) => {
+const PlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick, isNearPlacesCard}) => {
 
   const {isPremium, previewImage, price, isFavorite, title, rating, type} = offer;
 
@@ -53,11 +53,11 @@ const CitiesPlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick, i
   );
 };
 
-CitiesPlaceCard.propTypes = {
+PlaceCard.propTypes = {
   offer: offerType.isRequired,
   onPlaceCardTitleClick: PropTypes.func.isRequired,
   onPlaceCardMouseEnter: PropTypes.func.isRequired,
   isNearPlacesCard: PropTypes.bool,
 };
 
-export default CitiesPlaceCard;
+export default PlaceCard;

@@ -1,14 +1,17 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import OfferList from './cities-places-list';
+import PlaceCard from './place-card';
 import {offers} from '../../test-data/offers';
 
-test(`OfferList should render correctlt`, () => {
+test(`PlaceCard should render correctly`, () => {
   const tree = renderer.create(
-      <OfferList offers={offers}
-        onPlaceCardTitleClick={jest.fn()}
+      <PlaceCard
+        offer={offers[0]}
         onPlaceCardMouseEnter={jest.fn()}
-      />).toJSON();
+        index={1}
+        onPlaceCardTitleClick={jest.fn()}
+      />
+  ).toJSON();
 
   expect(tree).toMatchSnapshot();
 });
