@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 
 const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 10);
 
-const PageMainProperty = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
+const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
   const {images, isPremium, title, isFavorite, type, rating, bedrooms, maxAdults, price, goods, host, description} = offer;
   const {name, avatarUrl} = host;
   const offersToShow = offers.slice(0, 3);
@@ -192,10 +192,10 @@ const PageMainProperty = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter})
   );
 };
 
-PageMainProperty.propTypes = {
+Property.propTypes = {
   offer: offerType.isRequired,
   onPlaceCardTitleClick: PropTypes.func.isRequired,
   onPlaceCardMouseEnter: PropTypes.func.isRequired,
 };
 
-export default PageMainProperty;
+export default Property;

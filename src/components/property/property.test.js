@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import PageMainProperty from './page-main-property';
+import Property from './property';
 import {offers} from '../../test-data/offers';
 
-test(`PageMainProperty should render correctly`, () => {
+test(`Property should render correctly`, () => {
   const tree = renderer.create(
-      <PageMainProperty
+      <Property
         offer={offers[0]}
         onPlaceCardTitleClick={jest.fn()}
         onPlaceCardMouseEnter={jest.fn()}

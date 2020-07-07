@@ -29,7 +29,7 @@ describe(`CitiesPlaceCard e2e test`, () => {
 
     expect(onPlaceCardMouseEnter.mock.calls[0][0]).toMatchObject(offers[0]);
   });
-  test(`should render PageMainProperty component on title click`, () => {
+  test(`should render Property component on title click`, () => {
     const OfferTitleClick = jest.fn();
 
     const offerIndex = 1;
