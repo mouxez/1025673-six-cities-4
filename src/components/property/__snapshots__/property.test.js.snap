@@ -1064,7 +1064,6 @@ exports[`Property should render correctly 1`] = `
           style={
             Object {
               "height": "100%",
-              "width": "100%",
             }
           }
         />
