@@ -1,11 +1,10 @@
 import React from 'react';
-import OffersList from '../offers-list/offers-list';
+import PlacesList from '../places-list/places-list';
 import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 import Map from '../map/map';
 
-const Main = ({offers, onOfferTitleClick}) => {
-
+const Main = ({offers, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -89,7 +88,11 @@ const Main = ({offers, onOfferTitleClick}) => {
                   <li className="places__option" tabIndex="0">Top rated first</li>
                 </ul>
               </form>
-              <OffersList offers={offers} onOfferTitleClick={onOfferTitleClick}/>
+              <PlacesList
+                offers={offers}
+                onPlaceCardTitleClick={onPlaceCardTitleClick}
+                onPlaceCardMouseEnter={onPlaceCardMouseEnter}
+              />
             </section>
             <div className="cities__right-section">
               <section className="cities__map map">
@@ -107,7 +110,8 @@ Main.propTypes = {
   offers: PropTypes.arrayOf(
       offerType.isRequired
   ).isRequired,
-  onOfferTitleClick: PropTypes.func.isRequired,
+  onPlaceCardTitleClick: PropTypes.func.isRequired,
+  onPlaceCardMouseEnter: PropTypes.func.isRequired,
 };
 
 export default Main;

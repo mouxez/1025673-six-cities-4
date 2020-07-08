@@ -3,27 +3,40 @@ import Main from '../main/main';
 import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 import {Switch, Route, BrowserRouter} from "react-router-dom";
-import OfferDetailed from '../offer-detailed/offer-detailed';
+import Property from '../property/property';
 
 class App extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       activeOffer: null,
+      activeOfferData: null,
     };
-    this.handleOfferTitleClick = this.handleOfferTitleClick.bind(this);
+    this.handlePlaceCardTitleClick = this.handlePlaceCardTitleClick.bind(this);
+    this.handlePlaceCardMouseEnter = this.handlePlaceCardMouseEnter.bind(this);
   }
-  handleOfferTitleClick(offer) {
-    this.setState({activeOffer: offer});
+  handlePlaceCardTitleClick(clickedOffer) {
+    this.setState({activeOffer: clickedOffer});
+  }
+  handlePlaceCardMouseEnter(hoveredOffer) {
+    this.setState({activeOfferData: hoveredOffer});
   }
   _renderMain() {
     if (this.state.activeOffer) {
       return (
-        <OfferDetailed offer={this.state.activeOffer} />
+        <Property
+          offer={this.state.activeOffer}
+          onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
+          onPlaceCardMouseEnter={this.handlePlaceCardMouseEnter}
+        />
       );
     } else {
       return (
-        <Main offers={this.props.offers} onOfferTitleClick={this.handleOfferTitleClick} />
+        <Main
+          offers={this.props.offers}
+          onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
+          onPlaceCardMouseEnter={this.handlePlaceCardMouseEnter}
+        />
       );
     }
   }
@@ -37,7 +50,11 @@ class App extends React.PureComponent {
             {this._renderMain()}
           </Route>
           <Route exact path="/dev-detailed">
-            <OfferDetailed offer={offers[0]} />
+            <Property
+              offer={offers[0]}
+              onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
+              onPlaceCardMouseEnter={this.handlePlaceCardMouseEnter}
+            />
           </Route>
         </Switch>
       </BrowserRouter>

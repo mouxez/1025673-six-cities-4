@@ -2,24 +2,27 @@ import React from 'react';
 import {offerType} from '../../types/offer';
 import PropTypes from 'prop-types';
 
-const OfferCard = ({offer, onMouseEnter, onOfferTitleClick}) => {
+const PlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick, isNearPlacesCard}) => {
 
   const {isPremium, previewImage, price, isFavorite, title, rating, type} = offer;
 
-  const handleOfferTitleClick = (evt) => {
+  const handlePlaceCardTitleClick = (evt) => {
     evt.preventDefault();
-    onOfferTitleClick(offer);
+    onPlaceCardTitleClick(offer);
   };
 
+  const getPremiumMark = () => isPremium ? <div className="place-card__mark"><span>Premium</span></div> : ``;
+  const articleClassName = `place-card ${isNearPlacesCard ? `near-places__card` : `cities__place-card`}`;
+  const imageWrapperClassName = `place-card__image-wrapper ${isNearPlacesCard ? `near-places__image-wrapper` : `cities__image-wrapper`}`;
+
   return (
+
     <article
-      className="cities__place-card place-card"
-      onMouseEnter={() => onMouseEnter(offer)}
+      className={articleClassName}
+      onMouseEnter={() => onPlaceCardMouseEnter(offer)}
     >
-      {isPremium ? <div className="place-card__mark">
-        <span>Premium</span>
-      </div> : ``}
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      {isNearPlacesCard ? getPremiumMark() : ``}
+      <div className={imageWrapperClassName}>
         <a href="/">
           <img className="place-card__image" src={previewImage} width="260" height="200" alt="property image" />
         </a>
@@ -44,7 +47,7 @@ const OfferCard = ({offer, onMouseEnter, onOfferTitleClick}) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="/" onClick={handleOfferTitleClick}>{title}</a>
+          <a href="/" onClick={handlePlaceCardTitleClick}>{title}</a>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>
@@ -52,10 +55,11 @@ const OfferCard = ({offer, onMouseEnter, onOfferTitleClick}) => {
   );
 };
 
-OfferCard.propTypes = {
+PlaceCard.propTypes = {
   offer: offerType.isRequired,
-  onMouseEnter: PropTypes.func.isRequired,
-  onOfferTitleClick: PropTypes.func.isRequired,
+  onPlaceCardTitleClick: PropTypes.func.isRequired,
+  onPlaceCardMouseEnter: PropTypes.func.isRequired,
+  isNearPlacesCard: PropTypes.bool,
 };
 
-export default OfferCard;
+export default PlaceCard;

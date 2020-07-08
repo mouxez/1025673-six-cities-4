@@ -1,15 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import OfferCard from './offer-card';
+import Property from './property';
 import {offers} from '../../test-data/offers';
 
-test(`OfferCard should render correctly`, () => {
+test(`Property should render correctly`, () => {
   const tree = renderer.create(
-      <OfferCard
+      <Property
         offer={offers[0]}
-        onMouseEnter={jest.fn()}
-        index={1}
-        onOfferTitleClick={jest.fn()}
+        onPlaceCardTitleClick={jest.fn()}
+        onPlaceCardMouseEnter={jest.fn()}
       />
   ).toJSON();
 
