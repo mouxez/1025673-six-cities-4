@@ -1,102 +1,135 @@
 const reviews = [
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2019-05-08T14:13:56.569Z`,
     "id": 1,
-    "avatarUrl": `http://picsum.photos/90/90?r=1`,
-    "user": `John`,
-    "rating": 3.3,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `December 24, 2018`,
+    "rating": 1,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=1`,
+      "id": 1,
+      "isPro": false,
+      "name": `Maria`
+    }
   },
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2020-06-08T14:13:56.569Z`,
     "id": 2,
-    "avatarUrl": `http://picsum.photos/90/90?r=2`,
-    "user": `Ivan`,
-    "rating": 4.3,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `December 20, 2018`,
+    "rating": 2,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=2`,
+      "id": 2,
+      "isPro": true,
+      "name": `Max`
+    }
   },
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2010-05-08T14:13:56.569Z`,
     "id": 3,
-    "avatarUrl": `http://picsum.photos/90/90?r=3`,
-    "user": `Sveta`,
-    "rating": 1.3,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `July 24, 2018`,
+    "rating": 3,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=3`,
+      "id": 3,
+      "isPro": false,
+      "name": `Ivan`
+    }
   },
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2019-07-10T15:13:56.569Z`,
     "id": 4,
-    "avatarUrl": `http://picsum.photos/90/90?r=4`,
-    "user": `Elly`,
-    "rating": 3.3,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `May 14, 2018`,
+    "rating": 4,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=4`,
+      "id": 4,
+      "isPro": true,
+      "name": `Sveta`
+    }
   },
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2019-05-08T14:13:56.569Z`,
     "id": 5,
-    "avatarUrl": `http://picsum.photos/90/90?r=5`,
-    "user": `Kate`,
-    "rating": 0.3,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `December 21, 2019`,
+    "rating": 5,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=5`,
+      "id": 5,
+      "isPro": false,
+      "name": `Max`
+    }
   },
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2019-05-08T14:10:56.569Z`,
     "id": 6,
-    "avatarUrl": `http://picsum.photos/90/90?r=6`,
-    "user": `Mike`,
-    "rating": 2.3,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `March 11, 2020`,
+    "rating": 3,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=6`,
+      "id": 6,
+      "isPro": false,
+      "name": `Sergey`
+    }
   },
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2012-09-02T14:10:56.569Z`,
     "id": 7,
-    "avatarUrl": `http://picsum.photos/90/90?r=7`,
-    "user": `Jay`,
-    "rating": 5.0,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `October 14, 2016`,
+    "rating": 2,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=7`,
+      "id": 7,
+      "isPro": true,
+      "name": `Elly`
+    }
   },
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2015-09-08T14:13:56.569Z`,
     "id": 8,
-    "avatarUrl": `http://picsum.photos/90/90?r=8`,
-    "user": `Sergey`,
-    "rating": 4.7,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `May 22, 2010`,
+    "rating": 5,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=8`,
+      "id": 8,
+      "isPro": true,
+      "name": `Kate`
+    }
   },
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2016-05-08T17:13:56.569Z`,
     "id": 9,
-    "avatarUrl": `http://picsum.photos/90/90?r=9`,
-    "user": `Elena`,
-    "rating": 2.7,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `November 11, 2019`,
+    "rating": 5,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=9`,
+      "id": 9,
+      "isPro": false,
+      "name": `John`
+    }
   },
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2018-02-05T14:13:56.569Z`,
     "id": 10,
-    "avatarUrl": `http://picsum.photos/90/90?r=10`,
-    "user": `Tema`,
-    "rating": 1.7,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `June 07, 2012`,
+    "rating": 3,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=10`,
+      "id": 10,
+      "isPro": true,
+      "name": `Ken`
+    }
   },
   {
+    "comment": `A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.`,
+    "date": `2017-04-02T14:13:56.569Z`,
     "id": 11,
-    "avatarUrl": `http://picsum.photos/90/90?r=11`,
-    "user": `Olga`,
-    "rating": 4.9,
-    "description": `A quiet cozy and picturesque that hides behind a river by the unique lightness of Amsterdam.
-      The building is green and from 18th century.`,
-    "date": `July 01, 2020`,
+    "rating": 5,
+    "user": {
+      "avatarUrl": `http://picsum.photos/90/90?r=11`,
+      "id": 11,
+      "isPro": false,
+      "name": `Elena`
+    }
   }
 ];
 

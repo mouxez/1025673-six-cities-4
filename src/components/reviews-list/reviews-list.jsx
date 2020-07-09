@@ -14,10 +14,10 @@ const ReviewsList = ({reviews}) => {
             <li className="reviews__item" key={review.id}>
               <div className="reviews__user user">
                 <div className="reviews__avatar-wrapper user__avatar-wrapper">
-                  <img className="reviews__avatar user__avatar" src={review.avatarUrl} width="54" height="54" alt="Reviews avatar" />
+                  <img className="reviews__avatar user__avatar" src={review.user.avatarUrl} width="54" height="54" alt="Reviews avatar" />
                 </div>
                 <span className="reviews__user-name">
-                  {review.user}
+                  {review.name}
                 </span>
               </div>
               <div className="reviews__info">
@@ -28,7 +28,7 @@ const ReviewsList = ({reviews}) => {
                   </div>
                 </div>
                 <p className="reviews__text">
-                  {review.description}
+                  {review.comment}
                 </p>
                 <time className="reviews__time" dateTime={moment(review.date).format(`YYYY-MM-DD`)}>{moment(review.date).format(`MMMM YYYY`)}</time>
               </div>
