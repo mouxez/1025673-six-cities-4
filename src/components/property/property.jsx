@@ -1,18 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {offerType} from '../../types/offer';
 import {reviews} from '../../mock/reviews';
-import ReviewsList from '../reviews-list/reviews-list';
-import Map from '../map/map';
 import {offers} from '../../mock/offers';
-import PlacesList from '../places-list/places-list';
-import PropTypes from 'prop-types';
+import {MAX_COUNT_CLOSEST_OFFERS, MAX_COUNT_REVIEWS} from '../../data/constants';
+import {connect} from 'react-redux';
 
-const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 10);
+import ReviewsList from '../reviews-list/reviews-list';
+import PlacesList from '../places-list/places-list';
+import Map from '../map/map';
+
+const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, MAX_COUNT_REVIEWS);
 
 const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
   const {images, isPremium, title, isFavorite, type, rating, bedrooms, maxAdults, price, goods, host, description} = offer;
   const {name, avatarUrl} = host;
-  const offersToShow = offers.slice(0, 3);
+  const closestOffersToShow = offers.slice(0, MAX_COUNT_CLOSEST_OFFERS);
 
   return (
     <div className="page">
@@ -171,7 +174,7 @@ const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
           </div>
           <section className="property__map map">
             <Map
-              offers={offersToShow}
+              offers={closestOffersToShow}
               currentOffer={offer}
             />
           </section>
@@ -180,7 +183,7 @@ const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
           <section className="near-places places">
             <h2 className="near-places__title">Other places in the neighbourhood</h2>
             <PlacesList
-              offers={offersToShow}
+              offers={closestOffersToShow}
               onPlaceCardTitleClick={onPlaceCardTitleClick}
               onPlaceCardMouseEnter={onPlaceCardMouseEnter}
               isNearPlacesCard
@@ -198,4 +201,8 @@ Property.propTypes = {
   onPlaceCardMouseEnter: PropTypes.func.isRequired,
 };
 
-export default Property;
+const mapStateToProps = (state) => ({
+  offers: state.offers,
+});
+
+export default connect(mapStateToProps, null)(Property);

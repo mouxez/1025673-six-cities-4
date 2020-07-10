@@ -1,9 +1,10 @@
 import React from 'react';
-import Main from '../main/main';
 import PropTypes from "prop-types";
 import {offerType} from '../../types/offer';
 import {Switch, Route, BrowserRouter} from "react-router-dom";
+import {connect} from 'react-redux';
 import Property from '../property/property';
+import Main from '../main/main';
 
 class App extends React.PureComponent {
   constructor(props) {
@@ -68,4 +69,8 @@ App.propTypes = {
   ).isRequired,
 };
 
-export default App;
+const mapStateToProps = (state) => ({
+  offers: state.offers,
+});
+
+export default connect(mapStateToProps, null)(App);

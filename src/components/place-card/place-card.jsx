@@ -1,6 +1,6 @@
 import React from 'react';
-import {offerType} from '../../types/offer';
 import PropTypes from 'prop-types';
+import {offerType} from '../../types/offer';
 
 const PlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick, isNearPlacesCard}) => {
 
@@ -16,7 +16,6 @@ const PlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick, isNearP
   const imageWrapperClassName = `place-card__image-wrapper ${isNearPlacesCard ? `near-places__image-wrapper` : `cities__image-wrapper`}`;
 
   return (
-
     <article
       className={articleClassName}
       onMouseEnter={() => onPlaceCardMouseEnter(offer)}

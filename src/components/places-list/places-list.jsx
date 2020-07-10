@@ -1,7 +1,8 @@
 import React from 'react';
+import {offerType} from '../../types/offer';
+
 import PropTypes from 'prop-types';
 import PlaceCard from '../place-card/place-card';
-import {offerType} from '../../types/offer';
 
 const PlacesList = ({offers, onPlaceCardTitleClick, onPlaceCardMouseEnter, isNearPlacesCard}) => {
   const placesClassName = `places__list ${isNearPlacesCard ? `near-places__list` : `cities__places-list tabs__content`}`;
