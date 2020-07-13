@@ -37,8 +37,8 @@ const offers = [
     "bedrooms": 1,
     "city": {
       "location": {
-        "latitude": 52.370216,
-        "longitude": 4.895168,
+        "latitude": 48.8609,
+        "longitude": 2.3509,
         "zoom": 10
       },
       "name": `Paris`
@@ -56,8 +56,8 @@ const offers = [
     "isFavorite": true,
     "isPremium": false,
     "location": {
-      "latitude": 52.369553943508,
-      "longitude": 4.85309666406198,
+      "latitude": 48.8609,
+      "longitude": 2.3509,
       "zoom": 8
     },
     "maxAdults": 1,
@@ -71,8 +71,8 @@ const offers = [
     "bedrooms": 2,
     "city": {
       "location": {
-        "latitude": 52.370216,
-        "longitude": 4.895168,
+        "latitude": 53.5606,
+        "longitude": 9.9942,
         "zoom": 10
       },
       "name": `Hamburg`
@@ -90,8 +90,8 @@ const offers = [
     "isFavorite": true,
     "isPremium": true,
     "location": {
-      "latitude": 52.3909553943508,
-      "longitude": 4.929309666406198,
+      "latitude": 53.5606,
+      "longitude": 9.9942,
       "zoom": 8
     },
     "maxAdults": 2,
@@ -105,8 +105,8 @@ const offers = [
     "bedrooms": 4,
     "city": {
       "location": {
-        "latitude": 52.370216,
-        "longitude": 4.895168,
+        "latitude": 50.93840,
+        "longitude": 6.94433,
         "zoom": 10
       },
       "name": `Cologne`
@@ -124,8 +124,8 @@ const offers = [
     "isFavorite": false,
     "isPremium": true,
     "location": {
-      "latitude": 52.3809553943508,
-      "longitude": 4.939309666406198,
+      "latitude": 50.93840,
+      "longitude": 6.94433,
       "zoom": 8
     },
     "maxAdults": 3,
@@ -139,8 +139,8 @@ const offers = [
     "bedrooms": 5,
     "city": {
       "location": {
-        "latitude": 52.370216,
-        "longitude": 4.895168,
+        "latitude": 52.50932,
+        "longitude": 13.39114,
         "zoom": 10
       },
       "name": `Berlin`
@@ -158,8 +158,8 @@ const offers = [
     "isFavorite": false,
     "isPremium": true,
     "location": {
-      "latitude": 52.3809553943508,
-      "longitude": 4.939309666406198,
+      "latitude": 52.50932,
+      "longitude": 13.39114,
       "zoom": 8
     },
     "maxAdults": 5,
@@ -173,8 +173,8 @@ const offers = [
     "bedrooms": 6,
     "city": {
       "location": {
-        "latitude": 52.370245,
-        "longitude": 4.895145,
+        "latitude": 41.89852,
+        "longitude": 12.51952,
         "zoom": 10
       },
       "name": `Rome`
@@ -192,8 +192,8 @@ const offers = [
     "isFavorite": false,
     "isPremium": true,
     "location": {
-      "latitude": 52.3809553943508,
-      "longitude": 4.939309666406198,
+      "latitude": 41.89852,
+      "longitude": 12.51952,
       "zoom": 8
     },
     "maxAdults": 6,
