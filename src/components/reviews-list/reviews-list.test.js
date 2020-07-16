@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ReviewsList from './reviews-list';
 import {reviews} from '../../test-data/reviews';
+
+import ReviewsList from './reviews-list';
 
 test(`ReviewsList should render correctly`, () => {
   const tree = renderer.create(

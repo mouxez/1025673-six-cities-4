@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import {offerType} from '../../types/offer';
 import {reviews} from '../../mock/reviews';
-import {offers} from '../../mock/offers';
 import {MAX_COUNT_CLOSEST_OFFERS, MAX_COUNT_REVIEWS} from '../../data/constants';
-import {connect} from 'react-redux';
 
-import ReviewsList from '../reviews-list/reviews-list';
-import PlacesList from '../places-list/places-list';
 import Map from '../map/map';
+import PlacesList from '../places-list/places-list';
+import ReviewsList from '../reviews-list/reviews-list';
 
 const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, MAX_COUNT_REVIEWS);
 
-const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
-  const {images, isPremium, title, isFavorite, type, rating, bedrooms, maxAdults, price, goods, host, description} = offer;
+const Property = ({offer, offers, onPlaceCardTitleClick}) => {
+  const {images, isPremium, title, type, rating, bedrooms, maxAdults, price, goods, host, description} = offer;
   const {name, avatarUrl} = host;
   const closestOffersToShow = offers.slice(0, MAX_COUNT_CLOSEST_OFFERS);
 
@@ -46,10 +45,10 @@ const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
         <section className="property">
           <div className="property__gallery-container container">
             <div className="property__gallery">
-              {images.map((photoSrc) => {
+              {images.map((image) => {
                 return (
-                  <div className="property__image-wrapper" key={photoSrc}>
-                    <img className="property__image" src={photoSrc} alt="Photo studio" />
+                  <div key={image} className="property__image-wrapper">
+                    <img className="property__image" src={image} alt="Photo studio" />
                   </div>
                 );
               })}
@@ -66,14 +65,14 @@ const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
                 </h1>
                 <button className="property__bookmark-button button" type="button">
                   <svg className="property__bookmark-icon" width="31" height="33">
-                    {isFavorite ? <use xlinkHref="#icon-bookmark"></use> : ``}
+                    <use xlinkHref="#icon-bookmark"></use>
                   </svg>
                   <span className="visually-hidden">To bookmarks</span>
                 </button>
               </div>
               <div className="property__rating rating">
                 <div className="property__stars rating__stars">
-                  <span style={{width: (Math.floor(rating) * 20 + `%`)}}></span>
+                  <span style={{width: `${rating * 20}%`}} />
                   <span className="visually-hidden">Rating</span>
                 </div>
                 <span className="property__rating-value rating__value">{rating}</span>
@@ -174,7 +173,6 @@ const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
           </div>
           <section className="property__map map">
             <Map
-              offers={closestOffersToShow}
               currentOffer={offer}
             />
           </section>
@@ -185,7 +183,6 @@ const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
             <PlacesList
               offers={closestOffersToShow}
               onPlaceCardTitleClick={onPlaceCardTitleClick}
-              onPlaceCardMouseEnter={onPlaceCardMouseEnter}
               isNearPlacesCard
             />
           </section>
@@ -197,8 +194,10 @@ const Property = ({offer, onPlaceCardTitleClick, onPlaceCardMouseEnter}) => {
 
 Property.propTypes = {
   offer: offerType.isRequired,
-  onPlaceCardTitleClick: PropTypes.func.isRequired,
-  onPlaceCardMouseEnter: PropTypes.func.isRequired,
+  offers: PropTypes.arrayOf(
+      offerType.isRequired
+  ),
+  onPlaceCardTitleClick: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({

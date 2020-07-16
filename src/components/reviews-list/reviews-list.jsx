@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import {reviewType} from '../../types/review';
 import moment from 'moment';
 
@@ -17,14 +17,14 @@ const ReviewsList = ({reviews}) => {
                   <img className="reviews__avatar user__avatar" src={review.user.avatarUrl} width="54" height="54" alt="Reviews avatar" />
                 </div>
                 <span className="reviews__user-name">
-                  {review.name}
+                  {review.user.name}
                 </span>
               </div>
               <div className="reviews__info">
                 <div className="reviews__rating rating">
                   <div className="reviews__stars rating__stars">
-                    <span style={{width: (Math.floor(review.rating) * 20 + `%`)}}></span>
-                    <span className="visually-hidden">{review.rating}</span>
+                    <span style={{width: `${review.rating * 20}%`}} />
+                    <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
                 <p className="reviews__text">

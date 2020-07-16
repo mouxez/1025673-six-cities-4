@@ -1,13 +1,13 @@
 import React from 'react';
-import PropTypes from "prop-types";
-import {offerType} from '../../types/offer';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {offerType} from '../../types/offer';
 
+import LocationsList from '../locations-list/locations-list';
 import PlacesList from '../places-list/places-list';
 import Map from '../map/map';
-import LocationsList from '../locations-list/locations-list';
 
-const Main = ({offers, onPlaceCardTitleClick, onPlaceCardMouseEnter, activeCityName}) => {
+const Main = ({offers, onPlaceCardTitleClick, activeCityName}) => {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -63,12 +63,11 @@ const Main = ({offers, onPlaceCardTitleClick, onPlaceCardMouseEnter, activeCityN
               <PlacesList
                 offers={offers}
                 onPlaceCardTitleClick={onPlaceCardTitleClick}
-                onPlaceCardMouseEnter={onPlaceCardMouseEnter}
               />
             </section>
             <div className="cities__right-section">
               <section className="cities__map map">
-                <Map offers={offers}/>
+                <Map />
               </section>
             </div>
           </div>
@@ -83,7 +82,6 @@ Main.propTypes = {
       offerType.isRequired
   ).isRequired,
   onPlaceCardTitleClick: PropTypes.func.isRequired,
-  onPlaceCardMouseEnter: PropTypes.func.isRequired,
   activeCityName: PropTypes.string.isRequired,
 };
 

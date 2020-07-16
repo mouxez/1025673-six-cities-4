@@ -4,12 +4,7 @@ import {offerType} from '../../types/offer';
 
 const PlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick, isNearPlacesCard}) => {
 
-  const {isPremium, previewImage, price, isFavorite, title, rating, type} = offer;
-
-  const handlePlaceCardTitleClick = (evt) => {
-    evt.preventDefault();
-    onPlaceCardTitleClick(offer);
-  };
+  const {isPremium, previewImage, price, title, rating, type} = offer;
 
   const getPremiumMark = () => isPremium ? <div className="place-card__mark"><span>Premium</span></div> : ``;
   const articleClassName = `place-card ${isNearPlacesCard ? `near-places__card` : `cities__place-card`}`;
@@ -34,19 +29,22 @@ const PlaceCard = ({offer, onPlaceCardMouseEnter, onPlaceCardTitleClick, isNearP
           </div>
           <button className="place-card__bookmark-button button" type="button">
             <svg className="place-card__bookmark-icon" width="18" height="19">
-              {isFavorite ? <use xlinkHref="#icon-bookmark"></use> : ``}
+              <use xlinkHref="#icon-bookmark"></use>
             </svg>
             <span className="visually-hidden">To bookmarks</span>
           </button>
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{width: (Math.floor(rating) * 20 + `%`)}}></span>
-            <span className="visually-hidden">Rating</span>
+            <span style={{width: `${rating * 20}%`}} />
+            <span className="visually-hidden">{rating}</span>
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="/" onClick={handlePlaceCardTitleClick}>{title}</a>
+          <a href="/"
+            onClick={() => onPlaceCardTitleClick(offer)}>
+            {title}
+          </a>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>

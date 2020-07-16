@@ -1,34 +1,47 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {offerType} from '../../types/offer';
 
-import PropTypes from 'prop-types';
 import PlaceCard from '../place-card/place-card';
 
-const PlacesList = ({offers, onPlaceCardTitleClick, onPlaceCardMouseEnter, isNearPlacesCard}) => {
-  const placesClassName = `places__list ${isNearPlacesCard ? `near-places__list` : `cities__places-list tabs__content`}`;
-  return (
-    <div className={placesClassName}>
-      {offers.map((offer) => {
-        return (
-          <PlaceCard
-            key={offer.id}
-            offer={offer}
-            onPlaceCardMouseEnter={onPlaceCardMouseEnter}
-            onPlaceCardTitleClick={onPlaceCardTitleClick}
-            isNearPlacesCard={isNearPlacesCard}
-          />
-        );
-      })}
-    </div>
-  );
-};
+class PlacesList extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeOffer: null
+    };
+  }
+
+  render() {
+    const {offers, onPlaceCardTitleClick, isNearPlacesCard} = this.props;
+    const placesClassName = `places__list ${isNearPlacesCard ? `near-places__list` : `cities__places-list tabs__content`}`;
+    return (
+      <div className={placesClassName}>
+        {offers.map((offer) => {
+          return (
+            <PlaceCard
+              key={offer.id}
+              offer={offer}
+              onPlaceCardTitleClick={onPlaceCardTitleClick}
+              isNearPlacesCard={isNearPlacesCard}
+              onPlaceCardMouseEnter={(activeCard) => {
+                this.setState({
+                  activeOffer: activeCard
+                });
+              }}
+            />
+          );
+        })}
+      </div>
+    );
+  }
+}
 
 PlacesList.propTypes = {
   offers: PropTypes.arrayOf(
       offerType.isRequired
   ).isRequired,
   onPlaceCardTitleClick: PropTypes.func.isRequired,
-  onPlaceCardMouseEnter: PropTypes.func.isRequired,
   isNearPlacesCard: PropTypes.bool,
 };
 

@@ -1,10 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from './app';
-import {offers} from '../../test-data/offers';
+import {Provider} from 'react-redux';
+import {store} from '../../test-data/store';
 
-test(`App should render correctly`, () => {
-  const tree = renderer.create(<App offers={offers} />).toJSON();
+import App from './app';
+
+test(`App should render correctly with state from Store`, () => {
+  const tree = renderer.create(
+      <Provider store={store}>
+        <App />
+      </Provider>
+  ).toJSON();
 
   expect(tree).toMatchSnapshot();
 });

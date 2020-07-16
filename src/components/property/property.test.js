@@ -1,15 +1,19 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Property from './property';
 import {offers} from '../../test-data/offers';
+import {store} from '../../test-data/store';
+import {Provider} from 'react-redux';
 
-test(`Property should render correctly`, () => {
+import Property from './property';
+
+test(`Property should render correctly with state from Store`, () => {
   const tree = renderer.create(
-      <Property
-        offer={offers[0]}
-        onPlaceCardTitleClick={jest.fn()}
-        onPlaceCardMouseEnter={jest.fn()}
-      />
+      <Provider store={store}>
+        <Property
+          offer={offers[0]}
+          onPlaceCardTitleClick={jest.fn()}
+        />
+      </Provider>
   ).toJSON();
 
   expect(tree).toMatchSnapshot();

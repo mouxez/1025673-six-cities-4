@@ -1,49 +1,45 @@
 import React from 'react';
-import PropTypes from "prop-types";
-import {offerType} from '../../types/offer';
-import {Switch, Route, BrowserRouter} from "react-router-dom";
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import Property from '../property/property';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {offerType} from '../../types/offer';
+import {offers} from '../../mock/offers';
+
 import Main from '../main/main';
+import Property from '../property/property';
 
 class App extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      activeOffer: null,
-      activeOfferData: null,
+      activeOffer: null
     };
-    this.handlePlaceCardTitleClick = this.handlePlaceCardTitleClick.bind(this);
-    this.handlePlaceCardMouseEnter = this.handlePlaceCardMouseEnter.bind(this);
+    this._handlePlaceCardTitleClick = this._handlePlaceCardTitleClick.bind(this);
   }
-  handlePlaceCardTitleClick(clickedOffer) {
-    this.setState({activeOffer: clickedOffer});
-  }
-  handlePlaceCardMouseEnter(hoveredOffer) {
-    this.setState({activeOfferData: hoveredOffer});
+
+  _handlePlaceCardTitleClick(clickedOffer) {
+    this.setState({
+      activeOffer: clickedOffer,
+    });
   }
   _renderMain() {
     if (this.state.activeOffer) {
       return (
         <Property
           offer={this.state.activeOffer}
-          onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
-          onPlaceCardMouseEnter={this.handlePlaceCardMouseEnter}
+          onPlaceCardTitleClick={this._handlePlaceCardTitleClick}
         />
       );
     } else {
       return (
         <Main
-          offers={this.props.offers}
-          onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
-          onPlaceCardMouseEnter={this.handlePlaceCardMouseEnter}
+          onPlaceCardTitleClick={this._handlePlaceCardTitleClick}
         />
       );
     }
   }
 
   render() {
-    const {offers} = this.props;
     return (
       <BrowserRouter>
         <Switch>
@@ -53,8 +49,7 @@ class App extends React.PureComponent {
           <Route exact path="/dev-detailed">
             <Property
               offer={offers[0]}
-              onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
-              onPlaceCardMouseEnter={this.handlePlaceCardMouseEnter}
+              onPlaceCardTitleClick={this._handlePlaceCardTitleClick}
             />
           </Route>
         </Switch>
