@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should render correctly 1`] = `
+exports[`App should render correctly with state from Store 1`] = `
 <div
   className="page page--gray page--main"
 >
@@ -71,76 +71,18 @@ exports[`App should render correctly 1`] = `
         className="locations container"
       >
         <ul
-          className="locations__list tabs__list"
+          className="locations__list tabs__list "
         >
           <li
             className="locations__item"
           >
             <a
-              className="locations__item-link tabs__item"
-              href="#"
-            >
-              <span>
-                Paris
-              </span>
-            </a>
-          </li>
-          <li
-            className="locations__item"
-          >
-            <a
-              className="locations__item-link tabs__item"
-              href="#"
-            >
-              <span>
-                Cologne
-              </span>
-            </a>
-          </li>
-          <li
-            className="locations__item"
-          >
-            <a
-              className="locations__item-link tabs__item"
-              href="#"
-            >
-              <span>
-                Brussels
-              </span>
-            </a>
-          </li>
-          <li
-            className="locations__item"
-          >
-            <a
               className="locations__item-link tabs__item tabs__item--active"
-            >
-              <span>
-                Amsterdam
-              </span>
-            </a>
-          </li>
-          <li
-            className="locations__item"
-          >
-            <a
-              className="locations__item-link tabs__item"
               href="#"
+              onClick={[Function]}
             >
               <span>
-                Hamburg
-              </span>
-            </a>
-          </li>
-          <li
-            className="locations__item"
-          >
-            <a
-              className="locations__item-link tabs__item"
-              href="#"
-            >
-              <span>
-                Dusseldorf
+                Stockholm
               </span>
             </a>
           </li>
@@ -164,7 +106,9 @@ exports[`App should render correctly 1`] = `
           <b
             className="places__found"
           >
-            312 places to stay in Amsterdam
+            6
+             places to stay in 
+            Stockholm
           </b>
           <form
             action="#"
@@ -273,7 +217,9 @@ exports[`App should render correctly 1`] = `
                       height="19"
                       width="18"
                     >
-                      
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
                     </svg>
                     <span
                       className="visually-hidden"
@@ -291,14 +237,14 @@ exports[`App should render correctly 1`] = `
                     <span
                       style={
                         Object {
-                          "width": "80%",
+                          "width": "96%",
                         }
                       }
                     />
                     <span
                       className="visually-hidden"
                     >
-                      Rating
+                      4.8
                     </span>
                   </div>
                 </div>
@@ -389,14 +335,14 @@ exports[`App should render correctly 1`] = `
                     <span
                       style={
                         Object {
-                          "width": "40%",
+                          "width": "56%",
                         }
                       }
                     />
                     <span
                       className="visually-hidden"
                     >
-                      Rating
+                      2.8
                     </span>
                   </div>
                 </div>
@@ -487,14 +433,14 @@ exports[`App should render correctly 1`] = `
                     <span
                       style={
                         Object {
-                          "width": "60%",
+                          "width": "76%",
                         }
                       }
                     />
                     <span
                       className="visually-hidden"
                     >
-                      Rating
+                      3.8
                     </span>
                   </div>
                 </div>
@@ -565,7 +511,9 @@ exports[`App should render correctly 1`] = `
                       height="19"
                       width="18"
                     >
-                      
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
                     </svg>
                     <span
                       className="visually-hidden"
@@ -590,7 +538,203 @@ exports[`App should render correctly 1`] = `
                     <span
                       className="visually-hidden"
                     >
-                      Rating
+                      5
+                    </span>
+                  </div>
+                </div>
+                <h2
+                  className="place-card__name"
+                >
+                  <a
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    Beautiful & luxurious studio at great location
+                  </a>
+                </h2>
+                <p
+                  className="place-card__type"
+                >
+                  hotel
+                </p>
+              </div>
+            </article>
+            <article
+              className="place-card cities__place-card"
+              onMouseEnter={[Function]}
+            >
+              
+              <div
+                className="place-card__image-wrapper cities__image-wrapper"
+              >
+                <a
+                  href="/"
+                >
+                  <img
+                    alt="property image"
+                    className="place-card__image"
+                    height="200"
+                    src="http://picsum.photos/260/200?r=5"
+                    width="260"
+                  />
+                </a>
+              </div>
+              <div
+                className="place-card__info"
+              >
+                <div
+                  className="place-card__price-wrapper"
+                >
+                  <div
+                    className="place-card__price"
+                  >
+                    <b
+                      className="place-card__price-value"
+                    >
+                      €
+                      130
+                    </b>
+                    <span
+                      className="place-card__price-text"
+                    >
+                      / night
+                    </span>
+                  </div>
+                  <button
+                    className="place-card__bookmark-button button"
+                    type="button"
+                  >
+                    <svg
+                      className="place-card__bookmark-icon"
+                      height="19"
+                      width="18"
+                    >
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
+                    </svg>
+                    <span
+                      className="visually-hidden"
+                    >
+                      To bookmarks
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="place-card__rating rating"
+                >
+                  <div
+                    className="place-card__stars rating__stars"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "width": "48%",
+                        }
+                      }
+                    />
+                    <span
+                      className="visually-hidden"
+                    >
+                      2.4
+                    </span>
+                  </div>
+                </div>
+                <h2
+                  className="place-card__name"
+                >
+                  <a
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    Beautiful & luxurious studio at great location
+                  </a>
+                </h2>
+                <p
+                  className="place-card__type"
+                >
+                  hotel
+                </p>
+              </div>
+            </article>
+            <article
+              className="place-card cities__place-card"
+              onMouseEnter={[Function]}
+            >
+              
+              <div
+                className="place-card__image-wrapper cities__image-wrapper"
+              >
+                <a
+                  href="/"
+                >
+                  <img
+                    alt="property image"
+                    className="place-card__image"
+                    height="200"
+                    src="http://picsum.photos/260/200?r=6"
+                    width="260"
+                  />
+                </a>
+              </div>
+              <div
+                className="place-card__info"
+              >
+                <div
+                  className="place-card__price-wrapper"
+                >
+                  <div
+                    className="place-card__price"
+                  >
+                    <b
+                      className="place-card__price-value"
+                    >
+                      €
+                      160
+                    </b>
+                    <span
+                      className="place-card__price-text"
+                    >
+                      / night
+                    </span>
+                  </div>
+                  <button
+                    className="place-card__bookmark-button button"
+                    type="button"
+                  >
+                    <svg
+                      className="place-card__bookmark-icon"
+                      height="19"
+                      width="18"
+                    >
+                      <use
+                        xlinkHref="#icon-bookmark"
+                      />
+                    </svg>
+                    <span
+                      className="visually-hidden"
+                    >
+                      To bookmarks
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="place-card__rating rating"
+                >
+                  <div
+                    className="place-card__stars rating__stars"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "width": "70%",
+                        }
+                      }
+                    />
+                    <span
+                      className="visually-hidden"
+                    >
+                      3.5
                     </span>
                   </div>
                 </div>

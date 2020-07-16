@@ -51,7 +51,9 @@ exports[`PlaceCard should render correctly 1`] = `
           height="19"
           width="18"
         >
-          
+          <use
+            xlinkHref="#icon-bookmark"
+          />
         </svg>
         <span
           className="visually-hidden"
@@ -69,14 +71,14 @@ exports[`PlaceCard should render correctly 1`] = `
         <span
           style={
             Object {
-              "width": "80%",
+              "width": "96%",
             }
           }
         />
         <span
           className="visually-hidden"
         >
-          Rating
+          4.8
         </span>
       </div>
     </div>

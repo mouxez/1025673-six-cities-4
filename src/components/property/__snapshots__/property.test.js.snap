@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Property should render correctly 1`] = `
+exports[`Property should render correctly with state from Store 1`] = `
 <div
   className="page"
 >
@@ -128,7 +128,9 @@ exports[`Property should render correctly 1`] = `
                 height="33"
                 width="31"
               >
-                
+                <use
+                  xlinkHref="#icon-bookmark"
+                />
               </svg>
               <span
                 className="visually-hidden"
@@ -146,7 +148,7 @@ exports[`Property should render correctly 1`] = `
               <span
                 style={
                   Object {
-                    "width": "80%",
+                    "width": "96%",
                   }
                 }
               />
@@ -312,7 +314,9 @@ exports[`Property should render correctly 1`] = `
                   </div>
                   <span
                     className="reviews__user-name"
-                  />
+                  >
+                    Max
+                  </span>
                 </div>
                 <div
                   className="reviews__info"
@@ -333,7 +337,7 @@ exports[`Property should render correctly 1`] = `
                       <span
                         className="visually-hidden"
                       >
-                        2
+                        Rating
                       </span>
                     </div>
                   </div>
@@ -369,7 +373,9 @@ exports[`Property should render correctly 1`] = `
                   </div>
                   <span
                     className="reviews__user-name"
-                  />
+                  >
+                    Sveta
+                  </span>
                 </div>
                 <div
                   className="reviews__info"
@@ -390,7 +396,7 @@ exports[`Property should render correctly 1`] = `
                       <span
                         className="visually-hidden"
                       >
-                        4
+                        Rating
                       </span>
                     </div>
                   </div>
@@ -426,7 +432,9 @@ exports[`Property should render correctly 1`] = `
                   </div>
                   <span
                     className="reviews__user-name"
-                  />
+                  >
+                    Maria
+                  </span>
                 </div>
                 <div
                   className="reviews__info"
@@ -447,7 +455,7 @@ exports[`Property should render correctly 1`] = `
                       <span
                         className="visually-hidden"
                       >
-                        1
+                        Rating
                       </span>
                     </div>
                   </div>
@@ -483,7 +491,9 @@ exports[`Property should render correctly 1`] = `
                   </div>
                   <span
                     className="reviews__user-name"
-                  />
+                  >
+                    Max
+                  </span>
                 </div>
                 <div
                   className="reviews__info"
@@ -504,7 +514,7 @@ exports[`Property should render correctly 1`] = `
                       <span
                         className="visually-hidden"
                       >
-                        5
+                        Rating
                       </span>
                     </div>
                   </div>
@@ -540,7 +550,9 @@ exports[`Property should render correctly 1`] = `
                   </div>
                   <span
                     className="reviews__user-name"
-                  />
+                  >
+                    Sergey
+                  </span>
                 </div>
                 <div
                   className="reviews__info"
@@ -561,7 +573,7 @@ exports[`Property should render correctly 1`] = `
                       <span
                         className="visually-hidden"
                       >
-                        3
+                        Rating
                       </span>
                     </div>
                   </div>
@@ -597,7 +609,9 @@ exports[`Property should render correctly 1`] = `
                   </div>
                   <span
                     className="reviews__user-name"
-                  />
+                  >
+                    Ken
+                  </span>
                 </div>
                 <div
                   className="reviews__info"
@@ -618,7 +632,7 @@ exports[`Property should render correctly 1`] = `
                       <span
                         className="visually-hidden"
                       >
-                        3
+                        Rating
                       </span>
                     </div>
                   </div>
@@ -654,7 +668,9 @@ exports[`Property should render correctly 1`] = `
                   </div>
                   <span
                     className="reviews__user-name"
-                  />
+                  >
+                    Elena
+                  </span>
                 </div>
                 <div
                   className="reviews__info"
@@ -675,7 +691,7 @@ exports[`Property should render correctly 1`] = `
                       <span
                         className="visually-hidden"
                       >
-                        5
+                        Rating
                       </span>
                     </div>
                   </div>
@@ -711,7 +727,9 @@ exports[`Property should render correctly 1`] = `
                   </div>
                   <span
                     className="reviews__user-name"
-                  />
+                  >
+                    John
+                  </span>
                 </div>
                 <div
                   className="reviews__info"
@@ -732,7 +750,7 @@ exports[`Property should render correctly 1`] = `
                       <span
                         className="visually-hidden"
                       >
-                        5
+                        Rating
                       </span>
                     </div>
                   </div>
@@ -768,7 +786,9 @@ exports[`Property should render correctly 1`] = `
                   </div>
                   <span
                     className="reviews__user-name"
-                  />
+                  >
+                    Kate
+                  </span>
                 </div>
                 <div
                   className="reviews__info"
@@ -789,7 +809,7 @@ exports[`Property should render correctly 1`] = `
                       <span
                         className="visually-hidden"
                       >
-                        5
+                        Rating
                       </span>
                     </div>
                   </div>
@@ -825,7 +845,9 @@ exports[`Property should render correctly 1`] = `
                   </div>
                   <span
                     className="reviews__user-name"
-                  />
+                  >
+                    Elly
+                  </span>
                 </div>
                 <div
                   className="reviews__info"
@@ -846,7 +868,7 @@ exports[`Property should render correctly 1`] = `
                       <span
                         className="visually-hidden"
                       >
-                        2
+                        Rating
                       </span>
                     </div>
                   </div>
@@ -1110,7 +1132,9 @@ exports[`Property should render correctly 1`] = `
                     height="19"
                     width="18"
                   >
-                    
+                    <use
+                      xlinkHref="#icon-bookmark"
+                    />
                   </svg>
                   <span
                     className="visually-hidden"
@@ -1128,14 +1152,14 @@ exports[`Property should render correctly 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "80%",
+                        "width": "96%",
                       }
                     }
                   />
                   <span
                     className="visually-hidden"
                   >
-                    Rating
+                    4.8
                   </span>
                 </div>
               </div>
@@ -1226,14 +1250,14 @@ exports[`Property should render correctly 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "40%",
+                        "width": "56%",
                       }
                     }
                   />
                   <span
                     className="visually-hidden"
                   >
-                    Rating
+                    2.8
                   </span>
                 </div>
               </div>
@@ -1330,14 +1354,14 @@ exports[`Property should render correctly 1`] = `
                   <span
                     style={
                       Object {
-                        "width": "60%",
+                        "width": "76%",
                       }
                     }
                   />
                   <span
                     className="visually-hidden"
                   >
-                    Rating
+                    3.8
                   </span>
                 </div>
               </div>
