@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/app';
-import Reducer from './reducer';
+import reducer from './reducer';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
 const store = createStore(
-    Reducer,
+    reducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f
 );
 
