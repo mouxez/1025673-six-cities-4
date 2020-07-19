@@ -33,7 +33,7 @@ describe(`LocationsList`, () => {
         ActionCreator.changeCity(`Stockholm`)
     );
     expect(store.dispatch).toHaveBeenCalledWith(
-        ActionCreator.getOffers(`Stockholm`)
+        ActionCreator.setOffers(`Stockholm`)
     );
   });
 });

@@ -3,7 +3,7 @@ import {getOffersByCity} from '../utilits';
 
 const ActionType = {
   CHANGE_CITY: `CHANGE_CITY`,
-  GET_OFFERS: `GET_OFFERS`,
+  SET_OFFERS: `SET_OFFERS`,
 };
 
 const ActionCreator = {
@@ -13,10 +13,10 @@ const ActionCreator = {
       payload: cityName,
     };
   },
-  getOffers: (cityName) => {
+  setOffers: (cityName) => {
     const filteredOffers = getOffersByCity(cityName, offers);
     return {
-      type: ActionType.GET_OFFERS,
+      type: ActionType.SET_OFFERS,
       payload: filteredOffers,
     };
   },

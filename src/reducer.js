@@ -17,7 +17,7 @@ export default (state = initialState, action) => {
       return extend(state, {
         activeCityName: action.payload,
       });
-    case ActionType.GET_OFFERS:
+    case ActionType.SET_OFFERS:
       return extend(state, {
         offers: action.payload,
       });
