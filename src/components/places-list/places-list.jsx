@@ -10,6 +10,12 @@ class PlacesList extends React.PureComponent {
     this.state = {
       activeOffer: null
     };
+    this.handlePlaceCardMouseEnter = this.handlePlaceCardMouseEnter.bind(this);
+  }
+  handlePlaceCardMouseEnter(activeCard) {
+    this.setState({
+      activeOffer: activeCard
+    });
   }
 
   render() {
@@ -24,11 +30,7 @@ class PlacesList extends React.PureComponent {
               offer={offer}
               onPlaceCardTitleClick={onPlaceCardTitleClick}
               isNearPlacesCard={isNearPlacesCard}
-              onPlaceCardMouseEnter={(activeCard) => {
-                this.setState({
-                  activeOffer: activeCard
-                });
-              }}
+              onPlaceCardMouseEnter={this.handlePlaceCardMouseEnter}
             />
           );
         })}

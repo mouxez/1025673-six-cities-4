@@ -14,10 +14,10 @@ class App extends React.PureComponent {
     this.state = {
       activeOffer: null
     };
-    this._handlePlaceCardTitleClick = this._handlePlaceCardTitleClick.bind(this);
+    this.handlePlaceCardTitleClick = this.handlePlaceCardTitleClick.bind(this);
   }
 
-  _handlePlaceCardTitleClick(clickedOffer) {
+  handlePlaceCardTitleClick(clickedOffer) {
     this.setState({
       activeOffer: clickedOffer,
     });
@@ -27,13 +27,13 @@ class App extends React.PureComponent {
       return (
         <Property
           offer={this.state.activeOffer}
-          onPlaceCardTitleClick={this._handlePlaceCardTitleClick}
+          onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
         />
       );
     } else {
       return (
         <Main
-          onPlaceCardTitleClick={this._handlePlaceCardTitleClick}
+          onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
         />
       );
     }
@@ -49,7 +49,7 @@ class App extends React.PureComponent {
           <Route exact path="/dev-detailed">
             <Property
               offer={offers[0]}
-              onPlaceCardTitleClick={this._handlePlaceCardTitleClick}
+              onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
             />
           </Route>
         </Switch>
