@@ -2,19 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {offerType} from '../../types/offer';
-import {reviews} from '../../mock/reviews';
+import {reviewType} from '../../types/review';
 import {MAX_COUNT_CLOSEST_OFFERS, MAX_COUNT_REVIEWS} from '../../data/constants';
 
 import Map from '../map/map';
 import PlacesList from '../places-list/places-list';
 import ReviewsList from '../reviews-list/reviews-list';
 
-const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, MAX_COUNT_REVIEWS);
-
-const Property = ({offer, offers, onPlaceCardTitleClick}) => {
+const Property = ({offer, offers, reviews, onPlaceCardTitleClick}) => {
   const {images, isPremium, title, type, rating, bedrooms, maxAdults, price, goods, host, description} = offer;
   const {name, avatarUrl} = host;
   const closestOffersToShow = offers.slice(0, MAX_COUNT_CLOSEST_OFFERS);
+  const filteredReviews = reviews.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, MAX_COUNT_REVIEWS);
 
   return (
     <div className="page">
@@ -173,7 +172,9 @@ const Property = ({offer, offers, onPlaceCardTitleClick}) => {
           </div>
           <section className="property__map map">
             <Map
+              offers={offers}
               currentOffer={offer}
+              activeCityName={offer.city.name}
             />
           </section>
         </section>
@@ -196,6 +197,9 @@ Property.propTypes = {
   offer: offerType.isRequired,
   offers: PropTypes.arrayOf(
       offerType.isRequired
+  ),
+  reviews: PropTypes.arrayOf(
+      reviewType.isRequired
   ),
   onPlaceCardTitleClick: PropTypes.func.isRequired
 };

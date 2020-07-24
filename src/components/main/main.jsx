@@ -67,7 +67,10 @@ const Main = ({offers, onPlaceCardTitleClick, activeCityName}) => {
             </section>
             <div className="cities__right-section">
               <section className="cities__map map">
-                <Map />
+                <Map
+                  offers={offers}
+                  activeCityName={activeCityName}
+                />
               </section>
             </div>
           </div>

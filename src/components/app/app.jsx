@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {offerType} from '../../types/offer';
-import {offers} from '../../mock/offers';
+import {reviewType} from '../../types/review';
 
 import Main from '../main/main';
 import Property from '../property/property';
@@ -40,6 +40,7 @@ class App extends React.PureComponent {
   }
 
   render() {
+    const {offers, reviews} = this.props;
     return (
       <BrowserRouter>
         <Switch>
@@ -49,6 +50,7 @@ class App extends React.PureComponent {
           <Route exact path="/dev-detailed">
             <Property
               offer={offers[0]}
+              reviews={reviews}
               onPlaceCardTitleClick={this.handlePlaceCardTitleClick}
             />
           </Route>
@@ -62,10 +64,14 @@ App.propTypes = {
   offers: PropTypes.arrayOf(
       offerType.isRequired
   ).isRequired,
+  reviews: PropTypes.arrayOf(
+      reviewType.isRequired
+  )
 };
 
 const mapStateToProps = (state) => ({
   offers: state.offers,
+  reviews: state.reviews,
 });
 
 export default connect(mapStateToProps, null)(App);

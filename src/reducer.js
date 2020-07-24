@@ -1,4 +1,5 @@
 import {offers} from './mock/offers';
+import {reviews} from './mock/reviews';
 import {extend, getCities, getOffersByCity} from './utilits';
 import {ActionType} from './actions/types';
 
@@ -8,6 +9,7 @@ const filteredOffers = getOffersByCity(cities[0].name, offers);
 const initialState = {
   activeCityName: cities[0].name,
   offers: filteredOffers,
+  reviews,
   cities,
 };
 

@@ -1,17 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {Provider} from 'react-redux';
-import {store} from '../../test-data/store';
-
+import {offers} from '../../test-data/offers';
+import {cities} from '../../test-data/cities';
 import Main from './main';
 
 test(`Main should render correctly`, () => {
   const tree = renderer.create(
-      <Provider store={store}>
-        <Main
-          onPlaceCardTitleClick={jest.fn()}
-        />
-      </Provider>
+      <Main
+        offers={offers}
+        activeCityName={Object.keys(cities[0])[1]}
+        onPlaceCardTitleClick={jest.fn()}
+      />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
